@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+w<!DOCTYPE html>
 <html>
 <head>
 	<title>About - Vacant and Abandoned Building Finder - Chicago</title>
@@ -78,7 +77,7 @@
 			<p><iframe width="815" height="400" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?gco_displayAnnotations=true&gco_wmode=opaque&containerId=gviz_canvas&rmax=250&q=select+col1%2C+count()+from+3631508+where+col1+%3E%3D+'1%2F1%2F2010'&qrs=+and+col1+%3E%3D+&qre=+and+col1+%3C%3D+&qe=+group+by++col1+order+by+col1+asc&viz=GVIZ&t=TIMELINE&width=815&height=400"></iframe></p>
 			
 			<h2 id="were-there-problems-with-the-data">Were there problems with the data?</h2>
-			<p>There were! The 311 data from the City is published in a very raw format. A lot of fields were not normalized (had multiple values that meant the same thing), and an entire column (‘Is this building dangerous or hazardous?’) was completely blank for all rows. I compensated for this with a <a href="https://github.com/derekeder/Socrata-to-FusionTables">PHP script</a> that pulls the data from the City’s Data Portal and cleans up specific columns based on keywords I found that were common in meaning. For data fields that were blank, I flagged them as ‘unknown’.</a>
+			<p>There were! The 311 data from the City is published in a very raw format. A lot of fields were not normalized (had multiple values that meant the same thing), and an entire column (ï¿½Is this building dangerous or hazardous?ï¿½) was completely blank for all rows. I compensated for this with a <a href="https://github.com/derekeder/Socrata-to-FusionTables">PHP script</a> that pulls the data from the Cityï¿½s Data Portal and cleans up specific columns based on keywords I found that were common in meaning. For data fields that were blank, I flagged them as ï¿½unknownï¿½.</a>
 
 			<p>The <a href="http://data.cityofchicago.org/Service-Requests/311-Service-Requests-Vacant-and-Abandoned-Building/7nii-7srd">311 Service Requests - Vacant and Abandoned Buildings Reported</a> dataset has been published since January 2011, and I hope the City plans on revisiting it and cleaning up the data soon.</p>
 			
