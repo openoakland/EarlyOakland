@@ -81,7 +81,41 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
+var type_column = "'Type'";
+var tempWhereClause = [];
+if ( $("#cbType1").is(':checked')) tempWhereClause.push("Head Start");
+if ( $("#cbType2").is(':checked')) tempWhereClause.push("Head Start Family Child Care");
+if ( $("#cbType3").is(':checked')) tempWhereClause.push("Early Head Start");
+if ( $("#cbType4").is(':checked')) tempWhereClause.push("Oakland Unified School District");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
 
+var type_column = "'Ages Served'";
+var tempWhereClause = [];
+if ( $("#cbType5").is(':checked')) tempWhereClause.push("prenatal - 3-yrs");
+if ( $("#cbType6").is(':checked')) tempWhereClause.push("3-5-yrs");
+if ( $("#cbType7").is(':checked')) tempWhereClause.push("3-8-yrs");
+if ( $("#cbType8").is(':checked')) tempWhereClause.push("3-10-yrs");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+
+var type_column = "'half day'";
+var tempWhereClause = [];
+if ( $("#cbType9").is(':checked')) tempWhereClause.push("yes");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+
+var type_column = "'full day'";
+var tempWhereClause = [];
+if ( $("#cbType10").is(':checked')) tempWhereClause.push("yes");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+
+var type_column = "'before school'";
+var tempWhereClause = [];
+if ( $("#cbType11").is(':checked')) tempWhereClause.push("yes");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+
+var type_column = "'after school'";
+var tempWhereClause = [];
+if ( $("#cbType12").is(':checked')) tempWhereClause.push("yes");
+whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
     //-------end of custom filters--------
 
     if (address != "") {
