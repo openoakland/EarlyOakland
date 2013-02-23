@@ -1,3 +1,8 @@
+# Oakland Early Childhood Services Adaptations:
+Data file: https://www.google.com/fusiontables/data?docid=1D7Lta4QnerWlTClAiWoQsaWZksDcycqc0Up0QPI#
+
+
+
 # Fusion Table Searchable Map Template
 You want to put your data on a searchable, filterable map. This is a free, open source tool to help you do it.
 
