@@ -27,7 +27,7 @@ var MapsLib = {
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
   //example: locationColumn:     "'my location'",
-  locationColumn:     "geometry",
+  locationColumn:     "street address",
 
   map_centroid:       new google.maps.LatLng(37.8044, -122.2697), //center that your map defaults to
   locationScope:      "oakland",      //geographical area appended to all address searches
