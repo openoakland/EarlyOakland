@@ -81,6 +81,7 @@ var MapsLib = {
     var whereClause = MapsLib.locationColumn + " not equal to ''";
 
     //-----custom filters-------
+/*
 var type_column = "'Type'";
 var tempWhereClause = [];
 if ( $("#cbType1").is(':checked')) tempWhereClause.push("Head Start");
@@ -116,6 +117,7 @@ var type_column = "'after school'";
 var tempWhereClause = [];
 if ( $("#cbType12").is(':checked')) tempWhereClause.push("yes");
 whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+*/
     //-------end of custom filters--------
 
     if (address != "") {
