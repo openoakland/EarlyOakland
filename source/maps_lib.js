@@ -66,7 +66,7 @@ var MapsLib = {
     var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
     if (loadRadius != "") $("#search_radius").val(loadRadius);
     else $("#search_radius").val(MapsLib.searchRadius);
-    // $(":checkbox").attr("checked", "checked");
+    $(":checkbox").attr("checked", "checked");
     $("#result_count").hide();
 
     //run the default search
@@ -89,7 +89,7 @@ var MapsLib = {
     if ( $("#cbType1").is(':checked')) tempWhereClause.push("Head Start");
     if ( $("#cbType2").is(':checked')) tempWhereClause.push("Head Start Family Child Care");
     if ( $("#cbType3").is(':checked')) tempWhereClause.push("Early Head Start");
-    if ( $("#cbType4").is(':checked')) tempWhereClause.push("Oakland Unified School District");
+    if ( $("#cbType4").is(':checked')) tempWhereClause.push("OUSD");
     if (whereClause !== null) {
         whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
     } else {
