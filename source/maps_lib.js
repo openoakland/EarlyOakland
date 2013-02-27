@@ -66,7 +66,7 @@ var MapsLib = {
     var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
     if (loadRadius != "") $("#search_radius").val(loadRadius);
     else $("#search_radius").val(MapsLib.searchRadius);
-    $(":checkbox").attr("checked", "checked");
+    // $(":checkbox").attr("checked", "checked");
     $("#result_count").hide();
 
     //run the default search
