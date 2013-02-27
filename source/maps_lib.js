@@ -26,7 +26,7 @@ var MapsLib = {
 
   //name of the location column in your Fusion Table.
   //NOTE: if your location column name has spaces in it, surround it with single quotes
-  //example: locationColumn:     "'my location'",
+  //example: locationColumn:     "my location",
   locationColumn:     "StreetAddress",
 
   map_centroid:       new google.maps.LatLng(37.797577,-122.228394), //center that your map defaults to
@@ -78,49 +78,92 @@ var MapsLib = {
     var address = $("#search_address").val();
     MapsLib.searchRadius = $("#search_radius").val();
 
-    var whereClause = MapsLib.locationColumn + " not equal to ''";
+    var whereClause = null;
+    var type_column = null;
+    var tempWhereClause = null;
 
     //-----custom filters-------
 
-/*var type_column = "'Type'";
-var tempWhereClause = [];
-if ( $("#cbType1").is(':checked')) tempWhereClause.push("'Head Start'");
-if ( $("#cbType2").is(':checked')) tempWhereClause.push("'Head Start Family Child Care'");
-if ( $("#cbType3").is(':checked')) tempWhereClause.push("'Early Head Start'");
-if ( $("#cbType4").is(':checked')) tempWhereClause.push("'Oakland Unified School District'");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    type_column = "Type";
+    tempWhereClause = [];
+    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Head Start");
+    if ( $("#cbType2").is(':checked')) tempWhereClause.push("Head Start Family Child Care");
+    if ( $("#cbType3").is(':checked')) tempWhereClause.push("Early Head Start");
+    if ( $("#cbType4").is(':checked')) tempWhereClause.push("OUSD");
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
-var type_column = "'Ages Served'";
-var tempWhereClause = [];
-if ( $("#cbType5").is(':checked')) tempWhereClause.push("'prenatal - 3-yrs'");
-if ( $("#cbType6").is(':checked')) tempWhereClause.push("'3-5-yrs'");
-if ( $("#cbType7").is(':checked')) tempWhereClause.push("'3-8-yrs'");
-if ( $("#cbType8").is(':checked')) tempWhereClause.push("'3-10-yrs'");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    type_column = "'Ages Served'";
+    tempWhereClause = [];
+    if ( $("#cbType5").is(':checked')) tempWhereClause.push("prenatal - 3-yrs");
+    if ( $("#cbType6").is(':checked')) tempWhereClause.push("3-5-yrs");
+    if ( $("#cbType7").is(':checked')) tempWhereClause.push("3-8-yrs");
+    if ( $("#cbType8").is(':checked')) tempWhereClause.push("3-10-yrs");
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
-var type_column = "'half day'";
-var tempWhereClause = [];
-if ( $("#cbType9").is(':checked')) tempWhereClause.push("yes");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    type_column = "'half day'";
+    tempWhereClause = [];
+    if ( $("#cbType9").is(':checked')) {
+        tempWhereClause.push("yes");
+    } else {
+        tempWhereClause.push("no");
+    }
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
-var type_column = "'full day'";
-var tempWhereClause = [];
-if ( $("#cbType10").is(':checked')) tempWhereClause.push("yes");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    type_column = "'full day'";
+    tempWhereClause = [];
+    if ( $("#cbType10").is(':checked')) {
+        tempWhereClause.push("yes");
+    } else {
+        tempWhereClause.push("no");
+    }
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
-var type_column = "'before school'";
-var tempWhereClause = [];
-if ( $("#cbType11").is(':checked')) tempWhereClause.push("yes");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    type_column = "'before school'";
+    tempWhereClause = [];
+    if ( $("#cbType11").is(':checked')) {
+        tempWhereClause.push("yes");
+    } else {
+        tempWhereClause.push("no");
+    }
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
-var type_column = "'after school'";
-var tempWhereClause = [];
-if ( $("#cbType12").is(':checked')) tempWhereClause.push("yes");
-whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')"; */
+
+    type_column = "afterschool";
+    tempWhereClause = [];
+    if ( $("#cbType12").is(':checked')) {
+        tempWhereClause.push("yes");
+    } else {
+        tempWhereClause.push("no");
+    }
+    if (whereClause !== null) {
+        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    } else {
+        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
+    }
 
     //-------end of custom filters--------
 
-    if (address != "") {
+    if (address !== "") {
       if (address.toLowerCase().indexOf(MapsLib.locationScope) == -1)
         address = address + " " + MapsLib.locationScope;
 
@@ -161,7 +204,8 @@ whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') 
     //NOTE: styleId and templateId are recently added attributes to load custom marker styles and info windows
     //you can find your Ids inside the link generated by the 'Publish' option in Fusion Tables
     //for more details, see https://developers.google.com/fusiontables/docs/v1/using#WorkingStyles
-
+    console.log(whereClause);
+    // whereClause = "Type IN ('Head Start','Head Start Family Child Care','Early Head Start','Oakland Unified School District')"
     MapsLib.searchrecords = new google.maps.FusionTablesLayer({
       query: {
         from:   MapsLib.fusionTableId,
@@ -241,8 +285,8 @@ whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') 
   },
 
   handleError: function(json) {
-    if (json["error"] != undefined) {
-      var error = json["error"]["errors"]
+    if (json["error"] !== undefined) {
+      var error = json["error"]["errors"];
       console.log("Error in Fusion Table call!");
       for (var row in error) {
         console.log(" Domain: " + error[row]["domain"]);
