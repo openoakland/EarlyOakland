@@ -50,7 +50,7 @@
       google.maps.event.addListener(marker, 'click', function() {
         var html = '<dl>'
         Object.keys(obj).map(function(key) {
-          if (key === 'lat' || key === 'lon') return
+          if (key === 'location') return
           html += '<dt>' + key + '</dt> <dd>' + obj[key] + '</dd>'
         })
         html += '</dl>'
