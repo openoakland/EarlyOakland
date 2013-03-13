@@ -36,12 +36,14 @@
       google.maps.event.addListener(marker, 'click', function() {
         var html = '<dl>'
         Object.keys(obj).map(function(key) {
+          if (key === 'lat' || key === 'lon') return
           html += '<dt>' + key + '</dt> <dd>' + obj[key] + '</dd>'
         })
         html += '</dl>'
-        infoWindow.setContent(html);
-        infoWindow.open(map, marker);
-      });
+        var infoWindow = new google.maps.InfoWindow()
+        infoWindow.setContent(html)
+        infoWindow.open(map, marker)
+      })
       return marker
     })
   }

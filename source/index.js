@@ -8,6 +8,9 @@ $(window).resize(function () {
 $(function() {
 
   MapsLib.initialize();
+  fetchAllData(MapsLib.fusionTableId, function(err, data) {
+    showOnMap(map, data.venues)
+  })
   $("#search_address").geocomplete();
 
   $(':checkbox').click(function(){

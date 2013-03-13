@@ -25,3 +25,18 @@ a { color: #4B58A6; }
 .filter-red { background-color: #FB6353; }
 
 canvas {-ms-touch-action: double-tap-zoom;}
+
+dt, dd {
+    font-family:sans-serif;
+}
+dt {
+   float:left;
+   clear:left;  
+   text-align:left;
+   width:50%;
+   color:#bbb;
+}
+dd {
+   margin-left:1em;
+   color:#999
+}
