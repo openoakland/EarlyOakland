@@ -41,9 +41,10 @@
   }
   
   exports.showOnMap = function(map, objects) {
-    mapMarkers.forEach(function(marker) { marker.setMap(null) })
+    mapMarkers.forEach(function(marker) { if (marker) marker.setMap(null) })
     mapMarkers = objects.map(function(obj) {
-      var pos = new google.maps.LatLng(obj.lat, obj.lon)
+      if (!obj.location) return
+      var pos = new google.maps.LatLng(obj.location.lat, obj.location.lng)
       var marker = new google.maps.Marker({map: map, position: pos})
       marker.setVisible(true)
       google.maps.event.addListener(marker, 'click', function() {
