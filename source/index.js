@@ -11,29 +11,11 @@ $(function() {
   $("#search_address").geocomplete();
 
   $(':checkbox').click(function(){
-    MapsLib.doSearch();
+
   });
 
-  $(':radio').click(function(){
-    MapsLib.doSearch();
-  });
-  
-  $('#search_radius').change(function(){
-    MapsLib.doSearch();
-  });
-  
-  $('#search').click(function(){
-    MapsLib.doSearch();
-  });
-  
   $('#find_me').click(function(){
     MapsLib.findMe(); 
-    return false;
-  });
-  
-  $('#reset').click(function(){
-    $.address.parameter('address','');
-    MapsLib.initialize(); 
     return false;
   });
   

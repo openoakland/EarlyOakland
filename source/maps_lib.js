@@ -40,7 +40,6 @@ var MapsLib = {
   currentPinpoint: null,
 
   initialize: function() {
-    $( "#result_count" ).html("");
 
     geocoder = new google.maps.Geocoder();
     var myOptions = {
@@ -59,18 +58,6 @@ var MapsLib = {
         map.setCenter(MapsLib.map_centroid);
     });
 
-    MapsLib.searchrecords = null;
-
-    //reset filters
-    $("#search_address").val(MapsLib.convertToPlainString($.address.parameter('address')));
-    var loadRadius = MapsLib.convertToPlainString($.address.parameter('radius'));
-    if (loadRadius != "") $("#search_radius").val(loadRadius);
-    else $("#search_radius").val(MapsLib.searchRadius);
-    // $(":checkbox").attr("checked", "checked");
-    $("#result_count").hide();
-
-    //run the default search
-    MapsLib.doSearch();
   },
 
   doSearch: function(location) {
@@ -81,87 +68,6 @@ var MapsLib = {
     var whereClause = null;
     var type_column = null;
     var tempWhereClause = null;
-
-    //-----custom filters-------
-
-    type_column = "Type";
-    tempWhereClause = [];
-    if ( $("#cbType1").is(':checked')) tempWhereClause.push("Head Start");
-    if ( $("#cbType2").is(':checked')) tempWhereClause.push("Head Start Family Child Care");
-    if ( $("#cbType3").is(':checked')) tempWhereClause.push("Early Head Start");
-    if ( $("#cbType4").is(':checked')) tempWhereClause.push("OUSD");
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-    type_column = "'Ages Served'";
-    tempWhereClause = [];
-    if ( $("#cbType5").is(':checked')) tempWhereClause.push("prenatal - 3-yrs");
-    if ( $("#cbType6").is(':checked')) tempWhereClause.push("3-5-yrs");
-    if ( $("#cbType7").is(':checked')) tempWhereClause.push("3-8-yrs");
-    if ( $("#cbType8").is(':checked')) tempWhereClause.push("3-10-yrs");
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-    type_column = "'half day'";
-    tempWhereClause = [];
-    if ( $("#cbType9").is(':checked')) {
-        tempWhereClause.push("yes");
-    } else {
-        tempWhereClause.push("no");
-    }
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-    type_column = "'full day'";
-    tempWhereClause = [];
-    if ( $("#cbType10").is(':checked')) {
-        tempWhereClause.push("yes");
-    } else {
-        tempWhereClause.push("no");
-    }
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-    type_column = "'before school'";
-    tempWhereClause = [];
-    if ( $("#cbType11").is(':checked')) {
-        tempWhereClause.push("yes");
-    } else {
-        tempWhereClause.push("no");
-    }
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-
-    type_column = "afterschool";
-    tempWhereClause = [];
-    if ( $("#cbType12").is(':checked')) {
-        tempWhereClause.push("yes");
-    } else {
-        tempWhereClause.push("no");
-    }
-    if (whereClause !== null) {
-        whereClause += " AND " + type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    } else {
-        whereClause = type_column + " IN ('" + tempWhereClause.join('\',\'') + "')";
-    }
-
-    //-------end of custom filters--------
 
     if (address !== "") {
       if (address.toLowerCase().indexOf(MapsLib.locationScope) == -1)
@@ -183,41 +89,13 @@ var MapsLib = {
             animation: google.maps.Animation.DROP,
             title:address
           });
-
-          whereClause += " AND ST_INTERSECTS(" + MapsLib.locationColumn + ", CIRCLE(LATLNG" + MapsLib.currentPinpoint.toString() + "," + MapsLib.searchRadius + "))";
-
-          MapsLib.drawSearchRadiusCircle(MapsLib.currentPinpoint);
-          MapsLib.submitSearch(whereClause, map, MapsLib.currentPinpoint);
+          
         }
         else {
           alert("We could not find your address: " + status);
         }
       });
     }
-    else { //search without geocoding callback
-      MapsLib.submitSearch(whereClause, map);
-    }
-  },
-
-  submitSearch: function(whereClause, map, location) {
-    //get using all filters
-    //NOTE: styleId and templateId are recently added attributes to load custom marker styles and info windows
-    //you can find your Ids inside the link generated by the 'Publish' option in Fusion Tables
-    //for more details, see https://developers.google.com/fusiontables/docs/v1/using#WorkingStyles
-    console.log(whereClause);
-    // whereClause = "Type IN ('Head Start','Head Start Family Child Care','Early Head Start','Oakland Unified School District')"
-    MapsLib.searchrecords = new google.maps.FusionTablesLayer({
-      query: {
-        from:   MapsLib.fusionTableId,
-        select: MapsLib.locationColumn,
-        where:  whereClause
-      },
-      styleId: 2,
-      templateId: 2
-    });
-    MapsLib.searchrecords.setMap(map);
-    MapsLib.getCount(whereClause);
-    MapsLib.getList(whereClause);
   },
 
   clearSearch: function() {
@@ -258,32 +136,6 @@ var MapsLib = {
     });
   },
 
-  drawSearchRadiusCircle: function(point) {
-      var circleOptions = {
-        strokeColor: "#4b58a6",
-        strokeOpacity: 0.3,
-        strokeWeight: 1,
-        fillColor: "#4b58a6",
-        fillOpacity: 0.05,
-        map: map,
-        center: point,
-        clickable: false,
-        zIndex: -1,
-        radius: parseInt(MapsLib.searchRadius)
-      };
-      MapsLib.searchRadiusCircle = new google.maps.Circle(circleOptions);
-  },
-
-  query: function(selectColumns, whereClause, callback) {
-    var queryStr = [];
-    queryStr.push("SELECT " + selectColumns);
-    queryStr.push(" FROM " + MapsLib.fusionTableId);
-    queryStr.push(" WHERE " + whereClause);
-
-    var sql = encodeURIComponent(queryStr.join(" "));
-    $.ajax({url: "https://www.googleapis.com/fusiontables/v1/query?sql="+sql+"&callback="+callback+"&key="+MapsLib.googleApiKey, dataType: "jsonp"});
-  },
-
   handleError: function(json) {
     if (json["error"] !== undefined) {
       var error = json["error"]["errors"];
@@ -296,83 +148,9 @@ var MapsLib = {
     }
   },
 
-  getCount: function(whereClause) {
-    var selectColumns = "Count()";
-    MapsLib.query(selectColumns, whereClause,"MapsLib.displaySearchCount");
-  },
-
-  displaySearchCount: function(json) {
-    MapsLib.handleError(json);
-    var numRows = 0;
-    if (json["rows"] != null)
-      numRows = json["rows"][0];
-
-    var name = MapsLib.recordNamePlural;
-    if (numRows == 1)
-    name = MapsLib.recordName;
-    $( "#result_count" ).fadeOut(function() {
-        $( "#result_count" ).html(MapsLib.addCommas(numRows) + " " + name + " found");
-      });
-    $( "#result_count" ).fadeIn();
-  },
-
-getList: function(whereClause) {
-  var selectColumns = "'School Name', StreetAddress, 'Ages Served', Type ";
-  MapsLib.query(selectColumns, whereClause, "MapsLib.displayList");
-},
-
-displayList: function(json) {
-  MapsLib.handleError(json);
-  var data = json["rows"];
-  var template = "";
-
-  var results = $("#results_list");
-  results.hide().empty(); //hide the existing list and empty it out first
-
-  if (data == null) {
-    //clear results list
-    results.append("<li><span class='lead'>No results found</span></li>");
-  }
-  else {
-    for (var row in data) {
-      template = "\
-        <div class='row-fluid item-list'>\
-          <div class='span12'>\
-            <strong>" + data[row][0] + "</strong>\
-            <br />\
-            " + data[row][1] + "\
-            <br />\
-            " + data[row][2] + "\
-            <br />\
-            " + data[row][3] + "\
-          </div>\
-        </div>"
-      results.append(template);
-    }
-  }
-  results.fadeIn();
-},
-
-  addCommas: function(nStr) {
-    nStr += '';
-    x = nStr.split('.');
-    x1 = x[0];
-    x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
-      x1 = x1.replace(rgx, '$1' + ',' + '$2');
-    }
-    return x1 + x2;
-  },
-
   // maintains map centerpoint for responsive design
   calculateCenter: function() {
     center = map.getCenter();
   },
 
-  //converts a slug or query string in to readable text
-  convertToPlainString: function(text) {
-    if (text == undefined) return '';
-  	return decodeURIComponent(text);
-  }
 }
