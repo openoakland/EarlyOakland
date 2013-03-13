@@ -33,6 +33,15 @@
       var pos = new google.maps.LatLng(obj.lat, obj.lon)
       var marker = new google.maps.Marker({map: map, position: pos})
       marker.setVisible(true)
+      google.maps.event.addListener(marker, 'click', function() {
+        var html = '<dl>'
+        Object.keys(obj).map(function(key) {
+          html += '<dt>' + key + '</dt> <dd>' + obj[key] + '</dd>'
+        })
+        html += '</dl>'
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+      });
       return marker
     })
   }
