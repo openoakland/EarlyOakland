@@ -1,7 +1,7 @@
 (function(exports) {
   var mapMarkers = []
 
-  exports.fetchAllData = function(fusionTablesID, callback) {
+  exports.fetchFusionTablesData = function(fusionTablesID, callback) {
     $.ajax({
       dataType: 'jsonp',
       url: 'https://fusiontables.googleusercontent.com/fusiontables/api/query?sql=SELECT+*+FROM+' + fusionTablesID + '&jsonCallback=?',
@@ -10,6 +10,19 @@
       },
       error: function(err) {
         callback(err)
+      }
+    })
+  }
+  
+  exports.fetchJSON = function(url, cb) {
+    $.ajax({
+      dataType: 'json',
+      url: url,
+      success: function(data) {
+        cb(false, eval(data))
+      },
+      error: function(xhr, status, err) {
+        cb(err)
       }
     })
   }

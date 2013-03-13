@@ -8,9 +8,19 @@ $(window).resize(function () {
 $(function() {
 
   MapsLib.initialize();
-  fetchAllData(MapsLib.fusionTableId, function(err, data) {
-    showOnMap(map, data.venues)
+  
+  // fetch directly from fusion tables
+  // fetchFusionTablesData(MapsLib.fusionTableId, function(err, data) {
+  //   showOnMap(map, data.venues)
+  // })
+  
+  // fetch from a json file
+  fetchJSON('data.json', function(err, data) {
+    if (err) return alert(JSON.stringify(err))
+    showOnMap(map, data)
   })
+
+  
   $("#search_address").geocomplete();
 
   $(':checkbox').click(function(){
