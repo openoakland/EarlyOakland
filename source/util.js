@@ -66,10 +66,32 @@
     var results = []
     conditions.map(function(condition) {
       objects.map(function(obj) {
-        if (condition(object)) results.push(obj)
+        if (condition(obj)) results.push(obj)
       })
     })
     return _.uniq(results)
+  }
+  
+  exports.getAllChecked = function () {
+    var filters = []
+    $('input:checkbox:checked').map(function(i, input) {
+      var entry = $(input).parent()
+      var tuple = [entry.attr('data-key'), entry.attr('data-value')]
+      filters.push(tuple)
+    })
+    return filters
+  }
+
+  exports.buildConditions = function(filters) {
+    var conditions = []
+    filters.forEach(function(filter) {
+      var condition = function(obj) {
+        console.log(obj, filter)
+        return obj[filter[0]] === filter[1]
+      }
+      conditions.push(condition)
+    })
+    return conditions
   }
 
 })(window)

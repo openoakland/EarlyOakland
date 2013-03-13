@@ -6,6 +6,8 @@ $(window).resize(function () {
 }).resize();
 
 $(function() {
+  
+  var allData
 
   MapsLib.initialize();
   
@@ -17,16 +19,22 @@ $(function() {
   // fetch from a json file
   fetchJSON('data.json', function(err, data) {
     if (err) return alert(JSON.stringify(err))
+    allData = data
     showOnMap(map, data)
   })
-
   
   $("#search_address").geocomplete();
 
-  $(':checkbox').click(function(){
-
+  $(':checkbox').click(function(e){
+    var filters = getAllChecked()
+    var filtered = filter(allData, buildConditions(filters))
+    showOnMap(map, filtered)
   });
-
+  
+  $('#search').click(function(){
+    MapsLib.doSearch();
+  });
+  
   $('#find_me').click(function(){
     MapsLib.findMe(); 
     return false;

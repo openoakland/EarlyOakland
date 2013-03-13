@@ -63,6 +63,7 @@ var MapsLib = {
   doSearch: function(location) {
     MapsLib.clearSearch();
     var address = $("#search_address").val();
+    console.log('address', address)
     MapsLib.searchRadius = $("#search_radius").val();
 
     var whereClause = null;

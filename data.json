@@ -11,7 +11,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8399829,
     "lng": -122.265925
@@ -30,7 +30,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7501615,
     "lng": -122.1843068
@@ -49,7 +49,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7688659,
     "lng": -122.1770024
@@ -68,7 +68,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7927006,
     "lng": -122.248603
@@ -87,7 +87,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8014235,
     "lng": -122.2678217
@@ -106,7 +106,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.790878,
     "lng": -122.2397183
@@ -125,7 +125,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7624746,
     "lng": -122.1761283
@@ -144,7 +144,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8153154,
     "lng": -122.2825662
@@ -163,7 +163,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.756377,
     "lng": -122.1976164
@@ -182,7 +182,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7815919,
     "lng": -122.2333037
@@ -201,7 +201,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.785255,
     "lng": -122.236198
@@ -220,7 +220,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.737209,
     "lng": -122.185122
@@ -239,7 +239,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.783685,
     "lng": -122.19995
@@ -258,7 +258,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.752944,
     "lng": -122.177303
@@ -277,7 +277,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.794261,
     "lng": -122.227912
@@ -296,7 +296,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.74874519999999,
     "lng": -122.1736275
@@ -315,7 +315,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7933588,
     "lng": -122.2224524
@@ -334,7 +334,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7910449,
     "lng": -122.204633
@@ -353,7 +353,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.770275,
     "lng": -122.191736
@@ -372,7 +372,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.766211,
     "lng": -122.170179
@@ -391,7 +391,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.740094,
     "lng": -122.158484
@@ -410,7 +410,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.739902,
     "lng": -122.161859
@@ -429,7 +429,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.76478700000001,
     "lng": -122.18999
@@ -448,7 +448,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.84122199999999,
     "lng": -122.269127
@@ -467,7 +467,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7831702,
     "lng": -122.2228949
@@ -486,7 +486,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7752568,
     "lng": -122.2233729
@@ -501,11 +501,11 @@
   "Web Address": "",
   "Telephone Number": "510 597-5021",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.826129,
     "lng": -122.265639
@@ -520,11 +520,11 @@
   "Web Address": "",
   "Telephone Number": "510 238-7091",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8153239,
     "lng": -122.265005
@@ -539,11 +539,11 @@
   "Web Address": "",
   "Telephone Number": "510 535-5088",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7933588,
     "lng": -122.2224524
@@ -558,11 +558,11 @@
   "Web Address": "",
   "Telephone Number": "510 535-6105",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7752568,
     "lng": -122.2233729
@@ -577,11 +577,11 @@
   "Web Address": "",
   "Telephone Number": "510 836-0543",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8064273,
     "lng": -122.2863008
@@ -596,11 +596,11 @@
   "Web Address": "",
   "Telephone Number": "510 553-9925",
   "Type": "Early Head Start",
-  "Ages Served": "prenatal - 3-yrs",
+  "Ages Served": "Prenatal to 3 years",
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.74282100000001,
     "lng": -122.149788
@@ -619,7 +619,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.805305,
     "lng": -122.2649986
@@ -638,7 +638,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.83457,
     "lng": -122.258046
@@ -657,7 +657,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.8233111,
     "lng": -122.2727532
@@ -676,7 +676,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8072332,
     "lng": -122.2826931
@@ -695,7 +695,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.828301,
     "lng": -122.248243
@@ -714,7 +714,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8085415,
     "lng": -122.2979735
@@ -733,7 +733,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.8471621,
     "lng": -122.2644758
@@ -752,7 +752,7 @@
   "half day": "no",
   "full day": "no",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.8025078,
     "lng": -122.2110795
@@ -771,7 +771,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.8000176,
     "lng": -122.2690067
@@ -790,7 +790,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7885391,
     "lng": -122.2049464
@@ -809,7 +809,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.798691,
     "lng": -122.239984
@@ -828,7 +828,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7674471,
     "lng": -122.2068534
@@ -847,7 +847,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.782649,
     "lng": -122.229862
@@ -866,7 +866,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.79633,
     "lng": -122.2140552
@@ -885,7 +885,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7867202,
     "lng": -122.235829
@@ -904,7 +904,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.779451,
     "lng": -122.230805
@@ -923,7 +923,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "yes",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7786487,
     "lng": -122.2141017
@@ -942,7 +942,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "yes",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7935248,
     "lng": -122.1954134
@@ -961,7 +961,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7918521,
     "lng": -122.2264367
@@ -980,7 +980,7 @@
   "half day": "yes",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7526806,
     "lng": -122.1864156
@@ -999,7 +999,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7339079,
     "lng": -122.1891227
@@ -1018,7 +1018,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7756686,
     "lng": -122.1776251
@@ -1037,7 +1037,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.804299,
     "lng": -122.2727255
@@ -1056,7 +1056,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7518977,
     "lng": -122.1779995
@@ -1075,7 +1075,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "yes",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7912372,
     "lng": -122.1678223
@@ -1094,7 +1094,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7629878,
     "lng": -122.1516863
@@ -1113,7 +1113,7 @@
   "half day": "no",
   "full day": "yes",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7596724,
     "lng": -122.1918637
@@ -1132,7 +1132,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.74634229999999,
     "lng": -122.16157
@@ -1151,7 +1151,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "no",
+  "after school": "no",
   "location": {
     "lat": 37.7375025,
     "lng": -122.1735408
@@ -1170,7 +1170,7 @@
   "half day": "yes",
   "full day": "no",
   "before school": "no",
-  "afterschool": "yes",
+  "after school": "yes",
   "location": {
     "lat": 37.7592173,
     "lng": -122.1770068

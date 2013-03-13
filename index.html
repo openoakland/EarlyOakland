@@ -42,15 +42,6 @@
             </small>
           </h4>
           <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
-          <label>
-            within
-            <select class='input-small' id='search_radius'>
-              <option value='400'>2 blocks</option>
-              <option value='805'>1/2 mile</option>
-              <option value='1610'>1 mile</option>
-              <option value='3220'>2 miles</option>
-            </select>
-          </label>
           <input class='btn btn-primary' id='search' type='button' value='Search' />
         </div>
 
@@ -62,28 +53,28 @@
           <h4>Types of Program</h4>
           <ul class='inputs-list unstyled'>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Type' data-value='Head Start' class='checkbox inline'>
                 <input type='checkbox' id='cbType1' />
                 <span class='filter-box filter-yellow'></span>
                 Head Start
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Type' data-value='Head Start Family Child Care' class='checkbox inline'>
                 <input type='checkbox' id='cbType2' />
                 <span class='filter-box filter-yellow'></span>
                 Head Start Family Child Care
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Type' data-value='Early Head Start' class='checkbox inline'>
                 <input type='checkbox' id='cbType3' />
                 <span class='filter-box filter-yellow'></span>
                 Early Head Start
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Type' data-value='OUSD' class='checkbox inline'>
                 <input type='checkbox' id='cbType4' />
                 <span class='filter-box filter-yellow'></span>
                 Oakland Unified School District
@@ -94,28 +85,28 @@
           <h4>Ages</h4>
           <ul class='inputs-list unstyled'>
             <li class="row-fluid">
-              <label class='checkbox inline'>
+              <label data-key='Ages Served' data-value='Prenatal to 3 years' class='checkbox inline'>
                 <input type='checkbox' id='cbType5' />
                 <span class='filter-box filter-blue'></span>
                 Prenatal to 3 years
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Ages Served' data-value='3-5-yrs' class='checkbox inline'>
                 <input type='checkbox' id='cbType6' />
                 <span class='filter-box filter-blue'></span>
                 3-5 years
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Ages Served' data-value='3-8-yrs' class='checkbox inline'>
                 <input type='checkbox' id='cbType7' />
                 <span class='filter-box filter-blue'></span>
                 3-8 years
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='Ages Served' data-value='3-10-yrs' class='checkbox inline'>
                 <input type='checkbox' id='cbType8' />
                 <span class='filter-box filter-blue'></span>
                 3-10 years
@@ -126,28 +117,28 @@
           <h4>Times</h4>
           <ul class='inputs-list unstyled'>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='half day' data-value='yes' class='checkbox inline'>
                 <input type='checkbox' id='cbType9' />
                 <span class='filter-box filter-green'></span>
                 1/2 day
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='full day' data-value='no' class='checkbox inline'>
                 <input type='checkbox' id='cbType10' />
                 <span class='filter-box filter-green'></span>
                 Full day
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='before school' data-value='yes' class='checkbox inline'>
                 <input type='checkbox' id='cbType11' />
                 <span class='filter-box filter-purple'></span>
                 Before school
               </label>
             </li>
             <li>
-              <label class='checkbox inline'>
+              <label data-key='after school' data-value='yes' class='checkbox inline'>
                 <input type='checkbox' id='cbType12' />
                 <span class='filter-box filter-purple'></span>
                 After school
