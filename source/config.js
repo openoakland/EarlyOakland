@@ -1,4 +1,10 @@
-const config = {
-	"ResultListFields":["School Name","Campus/Site Name"],
-	"InfoWindowFields":["School Name","Campus/Site Name"]
-	};
+var CONFIG = (function() {
+     var private = {
+         "LIST_FIELDS":["School Name","Campus/Site Name"],
+         "INFO_FIELDS":["School Name","Campus/Site Name"]
+     };
+
+     return {
+        get: function(name) { return private[name]; }
+    };
+})();
