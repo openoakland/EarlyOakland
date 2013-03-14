@@ -8,7 +8,7 @@ $(window).resize(function () {
 $(function() {
   
   var allData
-
+  var resultList = "No sites found";
    	
   MapsLib.initialize();
   
@@ -17,21 +17,26 @@ $(function() {
   //   showOnMap(map, data.venues)
   // })
   
+  
   // fetch from a json file
   fetchJSON('data.json', function(err, data) {
     if (err) return alert(JSON.stringify(err))
     allData = data
+    //create results count
     $("#result_count").text(allData.length + " sites found");
-    showOnMap(map, data)
-  })
+    showOnMap(map, data) //create markers
+    $("#result_list").text(resultList);
+    })
   
   $("#search_address").geocomplete();
 
   $(':checkbox').click(function(e){
     var filters = getAllChecked()
     var filtered = filter(allData, buildConditions(filters))
+    //create result count
     $("#result_count").text(filtered.length	 + " sites found");
     showOnMap(map, filtered)
+    
   });
   
   $('#search').click(function(){

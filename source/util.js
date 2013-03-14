@@ -96,5 +96,7 @@
     })
     return conditions
   }
-
+  exports.createResultsList = function (obj){
+	 //create results list embed in marker loop for closure
+   }
 })(window)
