@@ -9,6 +9,7 @@ $(function() {
   
   var allData
 
+   	
   MapsLib.initialize();
   
   // fetch directly from fusion tables
@@ -20,6 +21,7 @@ $(function() {
   fetchJSON('data.json', function(err, data) {
     if (err) return alert(JSON.stringify(err))
     allData = data
+    $("#result_count").text(allData.length + " sites found");
     showOnMap(map, data)
   })
   
@@ -28,6 +30,7 @@ $(function() {
   $(':checkbox').click(function(e){
     var filters = getAllChecked()
     var filtered = filter(allData, buildConditions(filters))
+    $("#result_count").text(filtered.length	 + " sites found");
     showOnMap(map, filtered)
   });
   
