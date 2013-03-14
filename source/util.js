@@ -1,5 +1,8 @@
 (function(exports) {
   var mapMarkers = []
+ 
+ //counting markers
+  var resultCount = 0
 
   exports.fetchFusionTablesData = function(fusionTablesID, callback) {
     $.ajax({
@@ -42,6 +45,10 @@
   
   exports.showOnMap = function(map, objects) {
     mapMarkers.forEach(function(marker) { if (marker) marker.setMap(null) })
+    
+    //Result Count Box
+    $("#result_count").text(objects.length + " sites found");
+    
     mapMarkers = objects.map(function(obj) {
       if (!obj.location) return
       var pos = new google.maps.LatLng(obj.location.lat, obj.location.lng)
