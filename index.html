@@ -166,6 +166,58 @@
     </div>
   </div>
 
+  <script type="text/template" class="info-window-content-template">
+    <div class="popup-marker-data">
+        <h4><%= school_name.value %></h4>
+        <p><strong><%= campus_site_name.value %></strong></p>
+        <small><%= streetaddress.value %></small><br>
+        <small><%= telephone_number.value %></small>
+        <h6>Program Details</h6>
+        <hr>
+        <dl class="dl-horizontal">
+            <% if ( typeof director_name !== 'undefined' ) { %> 
+                <dt><small><%= director_name.name %>:</small></dt>
+                <dd><small><%= director_name.value %></small></dd>
+            <% } %>
+
+            <% if ( typeof ages_served !== 'undefined' ) { %> 
+                <dt><small><%= ages_served.name %>:</small></dt>
+                <dd><small><%= ages_served.value %></small></dd>
+            <% } %>
+
+            <% if ( typeof web_address !== 'undefined' ) { %> 
+                <dt><small><%= web_address.name %>:</small></dt>
+                <dd><small><a href="<%= web_address.value %>"><%= web_address.value %></a></small></dd>
+            <% } %>
+            
+            <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
+                    if ( half_day.value === 'yes' && full_day.value === 'yes' ) { 
+                        var time = half_day.name + ' and ' + full_day.name
+                    } else if ( half_day.value === 'yes' ) { 
+                        var time = half_day.name 
+                    } else {
+                        var time = full_day.name 
+                    } %> 
+
+                <dt><small>Time</small>:</dt>
+                <dd><small><%= time %></a></small></dd>
+            <% } %>
+
+            <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
+                    if ( before_school.value === 'yes' && after_school.value === 'yes' ) { 
+                        var school_hours = before_school.name + ' or ' + after_school.name
+                    } else if ( before_school.value === 'yes' ) { 
+                        var school_hours = before_school.name 
+                    } else {
+                        var school_hours = after_school.name 
+                    } %> 
+
+                <dt><small>School Hours</small>:</dt>
+                <dd><small><%= school_hours %></a></small></dd>
+            <% } %>
+        </dl>
+    </div>
+  </script>
 
   <script type="text/javascript" src="source/jquery.js"></script>
   <script type="text/javascript" src="source/bootstrap.js"></script>

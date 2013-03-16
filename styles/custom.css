@@ -26,17 +26,9 @@ a { color: #4B58A6; }
 
 canvas {-ms-touch-action: double-tap-zoom;}
 
-dt, dd {
-    font-family:sans-serif;
-}
-dt {
-   float:left;
-   clear:left;  
-   text-align:left;
-   width:50%;
-   color:#bbb;
-}
-dd {
-   margin-left:1em;
-   color:#999
-}
+/* Map Info Window Content */
+.popup-marker-data p { margin-bottom: 5px; }
+.popup-marker-data hr { margin: 5px 0 5px 0; }
+.popup-marker-data .dl-horizontal { margin-top: 5px; }
+.popup-marker-data dt { width: 105px; }	
+.popup-marker-data dd { margin-left: 115px; }	
