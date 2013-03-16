@@ -1,6 +1,6 @@
 (function(exports) {
   var mapMarkers = []
- 
+
  //counting markers
   var resultCount = 0
 
@@ -16,7 +16,7 @@
       }
     })
   }
-  
+
   exports.fetchJSON = function(url, cb) {
     $.ajax({
       dataType: 'json',
@@ -42,29 +42,65 @@
     })
     return { venues: cleaned }
   }
-  
-  exports.showOnMap = function(map, objects) {
-    mapMarkers.forEach(function(marker) { if (marker) marker.setMap(null) })
-    mapMarkers = objects.map(function(obj) {
-      if (!obj.location) return
-      var pos = new google.maps.LatLng(obj.location.lat, obj.location.lng)
-      var marker = new google.maps.Marker({map: map, position: pos})
-      marker.setVisible(true)
+
+  exports.showOnMap = function( map, objects ) {
+    var filter,
+        template,
+        filterKey,
+        filterType = {};
+
+    mapMarkers.forEach(function( marker ) { if ( marker ) marker.setMap( null ); });
+    mapMarkers = objects.map(function( obj ) {
+        var pos,
+            marker;
+
+      if ( !obj.location ) return;
+
+      pos = new google.maps.LatLng( obj.location.lat, obj.location.lng );
+      marker = new google.maps.Marker( {map: map, position: pos} );
+      marker.setVisible( true );
+
+      google.maps.event.addListener(map, 'click', function() {
+        closeInfoWindow();
+        });
+
       google.maps.event.addListener(marker, 'click', function() {
-        var html = '<dl>'
-        Object.keys(obj).map(function(key) {
-          if (key === 'location') return
-          html += '<dt>' + key + '</dt> <dd>' + obj[key] + '</dd>'
-        })
-        html += '</dl>'
-        var infoWindow = new google.maps.InfoWindow()
-        infoWindow.setContent(html)
-        infoWindow.open(map, marker)
-      })
-      return marker
-    })
-  }
-  
+
+        if ( isInfoWindowOpen() ) closeInfoWindow();
+
+        Object.keys( obj ).map(function( key ) {
+            filter = {};
+            filterKey = key.replace( /[^A-Z0-9]/ig, "_" );
+            filterKey = filterKey.toLowerCase();
+
+            filter.name = key;
+            filter.value = obj[ key ];
+
+            if ( obj[key] ) filterType[ filterKey ] = filter;
+        });
+
+        template = _.template($('.info-window-content-template').html());
+        template = template( filterType );
+
+        exports.infoWindow = new google.maps.InfoWindow();
+        exports.infoWindow.setContent(template);
+        exports.infoWindow.open(map, marker);
+      });
+
+      return marker;
+    });
+  };
+
+  exports.isInfoWindowOpen = function() {
+    if ( typeof infoWindow === 'undefined' ) return false;
+    return ( infoWindow.getMap() !== 'null' );
+  };
+
+  exports.closeInfoWindow = function() {
+    if ( typeof infoWindow === 'undefined' ) return;
+    infoWindow.close();
+  };
+
   exports.filter = function(objects, conditions) {
     var results = []
     conditions.map(function(condition) {
@@ -74,7 +110,7 @@
     })
     return _.uniq(results)
   }
-  
+
   exports.getAllChecked = function () {
     var filters = []
     $('input:checkbox:checked').map(function(i, input) {
@@ -97,6 +133,6 @@
     return conditions
   }
   exports.createResultsList = function (obj){
-	 //create results list embed in marker loop for closure
+     //create results list embed in marker loop for closure
    }
 })(window)
