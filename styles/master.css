@@ -1,5 +1,5 @@
 /*--------------------------------------------+
- | Site: TIF Projects Map  				  |
+ | Site: TIF Projects Map            |
  | Part: Master styles                        |
  +--------------------------------------------*/
 
@@ -91,10 +91,10 @@ ul.c2l, ul.c2r { list-style: none; margin-left: 0; }
 .content-simple  p { margin-top: .25em; font-size: 15px; }
 .content-simple li { font-size: 15px; margin-left: 25px; }
 
-	/* Full layout (no secondary content) */
-	.full .content { background-image: none; }
-	.full .content-primary { float: none; margin: 0 auto; padding-top: 1em; width: 100%; }
-	.full .content-secondary { display: none; }
+  /* Full layout (no secondary content) */
+  .full .content { background-image: none; }
+  .full .content-primary { float: none; margin: 0 auto; padding-top: 1em; width: 100%; }
+  .full .content-secondary { display: none; }
 
 /* Home */
 .content-home { margin: auto; padding: 30px 0; width: 900px; font-size: 16px; }
