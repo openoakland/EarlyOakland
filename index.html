@@ -46,7 +46,7 @@
         </p>
       </div>
       
-      <div class='span6'>
+      <div class='span6' id="mapContainer">
         <div id='map_canvas'></div>
       </div>
       
@@ -175,7 +175,7 @@
   </div>
 
   <script type="text/template" class="info-window-content-template">
-    <div class="popup-marker-data">
+    <div class="popup-marker-data" style="height: 250px;">
         <h4><%= school_name.value %></h4>
         <p><strong><%= campus_site_name.value %></strong></p>
         <small><%= streetaddress.value %></small><br>
@@ -226,7 +226,6 @@
         </dl>
     </div>
   </script>
-
   <script type="text/javascript" src="source/jquery.js"></script>
   <script type="text/javascript" src="source/bootstrap.js"></script>
   <script type="text/javascript" src="source/jquery.address.min.js"></script>

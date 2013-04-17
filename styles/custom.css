@@ -4,6 +4,8 @@ a { color: #4B58A6; }
   max-width: none;
 }
 
+#map_canvas { min-height: 400px; }
+
 .filter-box { 
   height: 15px; 
   width: 15px;  

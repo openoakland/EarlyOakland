@@ -113,10 +113,10 @@ ul.c2l, ul.c2r { list-style: none; margin-left: 0; }
 #header-nav li { float: left; margin: 0 0 0 1em; white-space: nowrap; text-align: center; font-size: 15px; color: #4b58a6;  }
 
 /* Maps */
-#map_canvas { height: 100%; width:100%; }
+#map_canvas { height: 100%; width:100%; min-height: 250px; }
 #map_canvas img { float: right; padding-bottom: 8px; }
 #map_canvas h5 { clear: both; }
-
+.popup-marker-data { height: 250px; }
 /* Muted text */
 .mute { color: #77787b; font-size: 12px; }
 p.mute { margin: 0; }
