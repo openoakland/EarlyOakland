@@ -21,12 +21,15 @@ $(function() {
   // fetch from a json file
   fetchJSON('data.json', function(err, data) {
     if (err) return alert(JSON.stringify(err))
+    data.map(function(item) { 
+      if (item.Type !== 'OUSD') item.markerURL = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+    })
     allData = data
     //create results count
     $("#result_count").text(allData.length + " sites found");
     showOnMap(map, data) //create markers
     $("#result_list").text(resultList);
-    })
+  })
   
   $("#search_address").geocomplete();
 

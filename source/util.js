@@ -57,7 +57,9 @@
       if ( !obj.location ) return;
 
       pos = new google.maps.LatLng( obj.location.lat, obj.location.lng );
-      marker = new google.maps.Marker( {map: map, position: pos} );
+      var markerOpts = { map: map, position: pos }
+      if (obj.markerURL) markerOpts.icon = obj.markerURL
+      marker = new google.maps.Marker( markerOpts );
       marker.setVisible( true );
 
       google.maps.event.addListener(map, 'click', function() {
