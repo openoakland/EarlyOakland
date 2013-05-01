@@ -127,7 +127,6 @@
     var conditions = []
     filters.forEach(function(filter) {
       var condition = function(obj) {
-        console.log(obj, filter)
         return obj[filter[0]] === filter[1]
       }
       conditions.push(condition)

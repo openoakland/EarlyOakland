@@ -35,7 +35,9 @@ $(function() {
 
   $(':checkbox').click(function(e){
     var filters = getAllChecked()
-    var filtered = filter(allData, buildConditions(filters))
+    var filtered
+    if (filters.length === 0) filtered = allData
+    else filtered = filter(allData, buildConditions(filters))
     //create result count
     $("#result_count").text(filtered.length	 + " sites found");
     showOnMap(map, filtered)
