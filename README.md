@@ -6,20 +6,8 @@ Forked from [![Searchable Map Template screenshot](http://derekeder.com/images/m
 
 ## Features
 
-* clean, full screen layout
-* mobile and tablet friendly using responsive design
-* address search (with geocomplete)
-* geolocation (find me!)
-* ability to easily add additional search filters (checkboxes, sliders, etc)
-* all done with HTML, CSS and Javascript - no server side code required
+This simple web app can be reused freely by anyone. It requires a data table in Google Fusion Tables and some basic javascript edits.
   
-## Dependencies
-
-* [Google Maps API V3](https://developers.google.com/maps/documentation/javascript)
-* [jQuery](http://jquery.org)
-* [jQuery Address](http://www.asual.com/jquery/address)
-* [Twitter Bootstrap](http://twitter.github.com/bootstrap)
-* [Underscore.js](http://underscorejs.org)
 
 ## Copyright
 
