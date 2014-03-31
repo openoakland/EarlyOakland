@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Early Childhood Services in Oakland</title>
+  <meta charset='utf-8' />
+  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+  <meta content='' name='description' />
+  <meta content='' name='author' />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/bootstrap.spacelab.min.css"/>
+  <link rel="stylesheet" href="styles/bootstrap-responsive.min.css"/>
+  <link rel="stylesheet" href="styles/custom.css"/>
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class='navbar'>
+    <div class='navbar-inner'>
+      <div class='container'>
+        <a href="index.html" class='brand'>Back to main page</a>
+      </div>
+    </div>
+  </div>
+  <div class='container-fluid'>
+    <div class='row-fluid'>
+      
+      <div class='span3'>
+        <p align="center">
+          <img src='images/eologo.png' width="150px"></p>
+        <p>
+          EarlyOakland is a campaign by the Oakland Education Cabinet to help Oaklanders find affordable early care and education services. You can use the map of to find subsidized programs for eligible families and children including HeadStart and Child Development Centers. Stay tuned for more resources!
+          <a href='about.html'><strong>Read more &raquo;</strong></a>
+          
+          <p>
+            If you cannot find the service you are looking for or need more assistance contact <a href='http://www.bananasinc.org' target="_blank">BANANAS</a> or call (510) 658-0381.
+          </p>
+           <p>
+            <a href='http://openoakland.org' target="_blank">Brought to you by OpenOakland</a>
+            &
+            <a href='http://www.oaklandnet.com' target="_blank">the Oakland Education Cabinet</a>
+            .
+          </p>
+          
+        </p>
+      </div>
+      
+      <div class='span6' id="mapContainer">
+        <div id='map_canvas'></div>
+        <p class='pull-right'>
+            <a href='http://derekeder.com/searchable_map_template/'>Searchable Map Template</a> by <a href='http://derekeder.com'>Derek Eder</a>.
+        </p>
+      </div>
+      
+      <div class='span3'>
+
+        <div class='well'>
+          <h4>
+            Address
+            <small>
+              (
+              <a id='find_me' href='#'>find me</a>
+              )
+            </small>
+          </h4>
+          <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
+          <input class='btn btn-primary' id='search' type='button' value='Search' />
+        </div>
+
+        <div class='well'>
+          <!-- Once you decide what filter you want, place the HTML code here. The section in the maps_lib.js is also marked. Once you're done, feel free to delete this explanatory section. -->
+
+        <p class='alert alert-info lead' id='result_count'></p>
+
+          <h4>Types of Program</h4>
+          <ul class='inputs-list unstyled'>
+            <li>
+              <label data-key='Type' data-value='Head Start' class='checkbox inline'>
+                <input type='checkbox' id='cbType1' />
+                <span class='filter-box filter-yellow'></span>
+                Head Start
+              </label>
+            </li>
+            <li>
+              <label data-key='Type' data-value='Head Start Family Child Care' class='checkbox inline'>
+                <input type='checkbox' id='cbType2' />
+                <span class='filter-box filter-yellow'></span>
+                Head Start Family Child Care
+              </label>
+            </li>
+            <li>
+              <label data-key='Type' data-value='Early Head Start' class='checkbox inline'>
+                <input type='checkbox' id='cbType3' />
+                <span class='filter-box filter-yellow'></span>
+                Early Head Start
+              </label>
+            </li>
+            <li>
+              <label data-key='Type' data-value='OUSD' class='checkbox inline'>
+                <input type='checkbox' id='cbType4' />
+                <span class='filter-box filter-red'></span>
+                Oakland Unified School District
+              </label>
+            </li>
+          </ul>
+
+          <h4>Ages</h4>
+          <ul class='inputs-list unstyled'>
+            <li class="row-fluid">
+              <label data-key='Ages Served' data-value='Prenatal to 3 years' class='checkbox inline'>
+                <input type='checkbox' id='cbType5' />
+                <span class='filter-box filter-blue'></span>
+                Prenatal to 3 years
+              </label>
+            </li>
+            <li>
+              <label data-key='Ages Served' data-value='3-5-yrs' class='checkbox inline'>
+                <input type='checkbox' id='cbType6' />
+                <span class='filter-box filter-blue'></span>
+                3-5 years
+              </label>
+            </li>
+            <li>
+              <label data-key='Ages Served' data-value='3-8-yrs' class='checkbox inline'>
+                <input type='checkbox' id='cbType7' />
+                <span class='filter-box filter-blue'></span>
+                3-8 years
+              </label>
+            </li>
+            <li>
+              <label data-key='Ages Served' data-value='3-10-yrs' class='checkbox inline'>
+                <input type='checkbox' id='cbType8' />
+                <span class='filter-box filter-blue'></span>
+                3-10 years
+              </label>
+            </li>
+          </ul>
+
+          <h4>Times</h4>
+          <ul class='inputs-list unstyled'>
+            <li>
+              <label data-key='half day' data-value='yes' class='checkbox inline'>
+                <input type='checkbox' id='cbType9' />
+                <span class='filter-box filter-green'></span>
+                1/2 day
+              </label>
+            </li>
+            <li>
+              <label data-key='full day' data-value='no' class='checkbox inline'>
+                <input type='checkbox' id='cbType10' />
+                <span class='filter-box filter-green'></span>
+                Full day
+              </label>
+            </li>
+            <li>
+              <label data-key='before school' data-value='yes' class='checkbox inline'>
+                <input type='checkbox' id='cbType11' />
+                <span class='filter-box filter-purple'></span>
+                Before school
+              </label>
+            </li>
+            <li>
+              <label data-key='after school' data-value='yes' class='checkbox inline'>
+                <input type='checkbox' id='cbType12' />
+                <span class='filter-box filter-purple'></span>
+                After school
+              </label>
+            </li>
+          </ul>
+
+        </div>
+        
+
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/template" class="info-window-content-template">
+    <div class="popup-marker-data" style="height: 250px;">
+        <h4><%= school_name.value %></h4>
+        <p><strong><%= campus_site_name.value %></strong></p>
+        <small><%= streetaddress.value %></small><br>
+        <small><%= telephone_number.value %></small>
+        <h6>Program Details</h6>
+        <hr>
+        <dl class="dl-horizontal">
+            <% if ( typeof director_name !== 'undefined' ) { %> 
+                <dt><small><%= director_name.name %>:</small></dt>
+                <dd><small><%= director_name.value %></small></dd>
+            <% } %>
+
+            <% if ( typeof ages_served !== 'undefined' ) { %> 
+                <dt><small><%= ages_served.name %>:</small></dt>
+                <dd><small><%= ages_served.value %></small></dd>
+            <% } %>
+
+            <% if ( typeof web_address !== 'undefined' ) { %> 
+                <dt><small><%= web_address.name %>:</small></dt>
+                <dd><small><a href="<%= web_address.value %>"><%= web_address.value %></a></small></dd>
+            <% } %>
+            
+            <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
+                    if ( half_day.value === 'yes' && full_day.value === 'yes' ) { 
+                        var time = half_day.name + ' and ' + full_day.name
+                    } else if ( half_day.value === 'yes' ) { 
+                        var time = half_day.name 
+                    } else {
+                        var time = full_day.name 
+                    } %> 
+
+                <dt><small>Time</small>:</dt>
+                <dd><small><%= time %></a></small></dd>
+            <% } %>
+
+            <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
+                    if ( before_school.value === 'yes' && after_school.value === 'yes' ) { 
+                        var school_hours = before_school.name + ' or ' + after_school.name
+                    } else if ( before_school.value === 'yes' ) { 
+                        var school_hours = before_school.name 
+                    } else {
+                        var school_hours = after_school.name 
+                    } %> 
+
+                <dt><small>School Hours</small>:</dt>
+                <dd><small><%= school_hours %></a></small></dd>
+            <% } %>
+        </dl>
+    </div>
+  </script>
+  <script type="text/javascript" src="source/jquery.js"></script>
+  <script type="text/javascript" src="source/bootstrap.js"></script>
+  <script type="text/javascript" src="source/jquery.address.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+  <script type="text/javascript" src="source/jquery.geocomplete.min.js"></script>
+  <script type="text/javascript" src="source/maps_lib.js"></script>
+  <script type="text/javascript" src="source/underscore.js"></script>
+  <script type="text/javascript" src="source/config.js"></script>
+  <script type="text/javascript" src="source/util.js"></script>
+  <script type="text/javascript" src="source/index.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35908939-4', 'earlyoakland.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

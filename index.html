@@ -1,250 +1,229 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <title>Early Childhood Services in Oakland</title>
-  <meta charset='utf-8' />
-  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-  <meta content='' name='description' />
-  <meta content='' name='author' />
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/bootstrap.spacelab.min.css"/>
-  <link rel="stylesheet" href="styles/bootstrap-responsive.min.css"/>
-  <link rel="stylesheet" href="styles/custom.css"/>
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-  <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-</head>
-<body>
-  <div class='navbar'>
-    <div class='navbar-inner'>
-      <div class='container'>
-        <a class='brand'>Early Childhood Services in Oakland</a>
-      </div>
-    </div>
-  </div>
-  <div class='container-fluid'>
-    <div class='row-fluid'>
-      
-      <div class='span3'>
-        <p align="center">
-          <img src='images/eologo.png' width="150px"></p>
-        <p>
-          EarlyOakland is a campaign by the Oakland Education Cabinet to help Oaklanders find affordable early care and education services. You can use the map of to find subsidized programs for eligible families and children including HeadStart and Child Development Centers. Stay tuned for more resources!
-          <a href='about.html'><strong>Read more &raquo;</strong></a>
-          
-          <p>
-            If you cannot find the service you are looking for or need more assistance contact <a href='http://www.bananasinc.org' target="_blank">BANANAS</a> or call (510) 658-0381.
-          </p>
-           <p>
-            <a href='http://openoakland.org' target="_blank">Brought to you by OpenOakland</a>
-            &
-            <a href='http://www.oaklandnet.com' target="_blank">the Oakland Education Cabinet</a>
-            .
-          </p>
-          
-        </p>
-      </div>
-      
-      <div class='span6' id="mapContainer">
-        <div id='map_canvas'></div>
-      </div>
-      
-      <div class='span3'>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Early Oakland helps parents find low cost early childhood education services">
+    <meta name="author" content="Spike">
+<!--    <link rel="shortcut icon" href="../../assets/ico/favicon.ico"> -->
 
-        <div class='well'>
-          <h4>
-            Address
-            <small>
-              (
-              <a id='find_me' href='#'>find me</a>
-              )
-            </small>
-          </h4>
-          <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
-          <input class='btn btn-primary' id='search' type='button' value='Search' />
+    <title>Early Oakland</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">EarlyOakland</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="find.html">Find Services</a></li>
+                <li><a href="#funders">Funders</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#why">Learn More</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div class='well'>
-          <!-- Once you decide what filter you want, place the HTML code here. The section in the maps_lib.js is also marked. Once you're done, feel free to delete this explanatory section. -->
+      </div>
+    </div>
 
-        <p class='alert alert-info lead' id='result_count'></p>
-
-          <h4>Types of Program</h4>
-          <ul class='inputs-list unstyled'>
-            <li>
-              <label data-key='Type' data-value='Head Start' class='checkbox inline'>
-                <input type='checkbox' id='cbType1' />
-                <span class='filter-box filter-yellow'></span>
-                Head Start
-              </label>
-            </li>
-            <li>
-              <label data-key='Type' data-value='Head Start Family Child Care' class='checkbox inline'>
-                <input type='checkbox' id='cbType2' />
-                <span class='filter-box filter-yellow'></span>
-                Head Start Family Child Care
-              </label>
-            </li>
-            <li>
-              <label data-key='Type' data-value='Early Head Start' class='checkbox inline'>
-                <input type='checkbox' id='cbType3' />
-                <span class='filter-box filter-yellow'></span>
-                Early Head Start
-              </label>
-            </li>
-            <li>
-              <label data-key='Type' data-value='OUSD' class='checkbox inline'>
-                <input type='checkbox' id='cbType4' />
-                <span class='filter-box filter-red'></span>
-                Oakland Unified School District
-              </label>
-            </li>
-          </ul>
-
-          <h4>Ages</h4>
-          <ul class='inputs-list unstyled'>
-            <li class="row-fluid">
-              <label data-key='Ages Served' data-value='Prenatal to 3 years' class='checkbox inline'>
-                <input type='checkbox' id='cbType5' />
-                <span class='filter-box filter-blue'></span>
-                Prenatal to 3 years
-              </label>
-            </li>
-            <li>
-              <label data-key='Ages Served' data-value='3-5-yrs' class='checkbox inline'>
-                <input type='checkbox' id='cbType6' />
-                <span class='filter-box filter-blue'></span>
-                3-5 years
-              </label>
-            </li>
-            <li>
-              <label data-key='Ages Served' data-value='3-8-yrs' class='checkbox inline'>
-                <input type='checkbox' id='cbType7' />
-                <span class='filter-box filter-blue'></span>
-                3-8 years
-              </label>
-            </li>
-            <li>
-              <label data-key='Ages Served' data-value='3-10-yrs' class='checkbox inline'>
-                <input type='checkbox' id='cbType8' />
-                <span class='filter-box filter-blue'></span>
-                3-10 years
-              </label>
-            </li>
-          </ul>
-
-          <h4>Times</h4>
-          <ul class='inputs-list unstyled'>
-            <li>
-              <label data-key='half day' data-value='yes' class='checkbox inline'>
-                <input type='checkbox' id='cbType9' />
-                <span class='filter-box filter-green'></span>
-                1/2 day
-              </label>
-            </li>
-            <li>
-              <label data-key='full day' data-value='no' class='checkbox inline'>
-                <input type='checkbox' id='cbType10' />
-                <span class='filter-box filter-green'></span>
-                Full day
-              </label>
-            </li>
-            <li>
-              <label data-key='before school' data-value='yes' class='checkbox inline'>
-                <input type='checkbox' id='cbType11' />
-                <span class='filter-box filter-purple'></span>
-                Before school
-              </label>
-            </li>
-            <li>
-              <label data-key='after school' data-value='yes' class='checkbox inline'>
-                <input type='checkbox' id='cbType12' />
-                <span class='filter-box filter-purple'></span>
-                After school
-              </label>
-            </li>
-          </ul>
-
+ <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+        <img src="images/startrotate1.jpg" alt="start" class = "img-responsive"/>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Early Oakland</h1>
+              <p>Learning is a lifelong process that starts the day we are born.</p>
+              <p><a class="btn btn-lg btn-primary" href="find.html" role="button">Enroll your child today</a></p>
+            </div>
+          </div>
         </div>
-        
+        <div class="item">
+          <div class="container">
+           <img src="images/startrotate2.jpg" align="center" alt="reader" class = "img-responsive"/>
+            <div class="carousel-caption">
+              <h1>We're here to help.</h1>
+              <p>Early learning programs and services are located near you, and EarlyOakland.Org is here to support you.  Many of these programs are free or low-cost.</p>
+              <p><a class="btn btn-lg btn-primary" href="#learn" role="button">Find Services</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Early Learning Programs Work</h1>
+              <p>Whatever effort it takes to get your child, particularly your 3 to 5 year old into an early learning program will be worth it--you will see the benefits throughout your child's life.</p>
+              <p><a class="btn btn-lg btn-primary" href="#why" role="button">Learn More</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
 
+
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<!-- START THE FEATURETTES -->
+
+<div class="container">
+     <hr class="featurette-divider">
+
+      <div class="row featurette"> <a name="why"></a>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Why should you consider enrolling your child? <span class="text-muted">Early learning is power.</span></h2>
+          <p class="lead">Children thrive when they are in a supervised learning environment where they socialize and learn with other children and engage in age-appropriate learning.</p>
+           <p><a class="btn btn-lg btn-primary" href="find.html" role="button">Find Services</a></p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/reader500.jpg" alt="reader">
+        </div>
       </div>
 
-    </div>
-  </div>
+      <hr class="featurette-divider">
 
-  <script type="text/template" class="info-window-content-template">
-    <div class="popup-marker-data" style="height: 250px;">
-        <h4><%= school_name.value %></h4>
-        <p><strong><%= campus_site_name.value %></strong></p>
-        <small><%= streetaddress.value %></small><br>
-        <small><%= telephone_number.value %></small>
-        <h6>Program Details</h6>
-        <hr>
-        <dl class="dl-horizontal">
-            <% if ( typeof director_name !== 'undefined' ) { %> 
-                <dt><small><%= director_name.name %>:</small></dt>
-                <dd><small><%= director_name.value %></small></dd>
-            <% } %>
+      <div class="row featurette"> 
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/carwash.jpg" alt="joy">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">What age can my child be? <span class="text-muted">Early learning makes a difference.</span></h2>
+          <p class="lead">Whatever effort it takes to get your child, particularly your 3 to 5 year old into a developmentally appropriate early learning program will be worth it--you will see the benefits throughout your child's life. We can help you connect to programs for children aged between 0 and 10 years.</p>
+           <p><a class="btn btn-lg btn-primary" href="find.html" role="button">Find Services Nearby!</a></p>
 
-            <% if ( typeof ages_served !== 'undefined' ) { %> 
-                <dt><small><%= ages_served.name %>:</small></dt>
-                <dd><small><%= ages_served.value %></small></dd>
-            <% } %>
+        </div>
+      </div>
 
-            <% if ( typeof web_address !== 'undefined' ) { %> 
-                <dt><small><%= web_address.name %>:</small></dt>
-                <dd><small><a href="<%= web_address.value %>"><%= web_address.value %></a></small></dd>
-            <% } %>
-            
-            <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
-                    if ( half_day.value === 'yes' && full_day.value === 'yes' ) { 
-                        var time = half_day.name + ' and ' + full_day.name
-                    } else if ( half_day.value === 'yes' ) { 
-                        var time = half_day.name 
-                    } else {
-                        var time = full_day.name 
-                    } %> 
+      <hr class="featurette-divider">
 
-                <dt><small>Time</small>:</dt>
-                <dd><small><%= time %></a></small></dd>
-            <% } %>
+      <div class="row featurette"> <a name="learn"></a>
+        <div class="col-md-7">
+          <h2 name="learn" class="featurette-heading">How Do I Find These Services? <span class="text-muted">Easy!</span></h2>
+          <p class="lead">Follow any button on this site to Find Services and you'll see a map that lets you pick your child's age, you can then see contact and enrollment information about services close to your home or work.  You can call too!</p>
+          <p><a class="btn btn-lg btn-primary pull-right" href="find.html" role="button">Find Services & Enroll Now</a></p>
 
-            <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
-                    if ( before_school.value === 'yes' && after_school.value === 'yes' ) { 
-                        var school_hours = before_school.name + ' or ' + after_school.name
-                    } else if ( before_school.value === 'yes' ) { 
-                        var school_hours = before_school.name 
-                    } else {
-                        var school_hours = after_school.name 
-                    } %> 
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/map.jpg" alt="map">
+        </div>
+      </div>
 
-                <dt><small>School Hours</small>:</dt>
-                <dd><small><%= school_hours %></a></small></dd>
-            <% } %>
-        </dl>
-    </div>
-  </script>
-  <script type="text/javascript" src="source/jquery.js"></script>
-  <script type="text/javascript" src="source/bootstrap.js"></script>
-  <script type="text/javascript" src="source/jquery.address.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-  <script type="text/javascript" src="source/jquery.geocomplete.min.js"></script>
-  <script type="text/javascript" src="source/maps_lib.js"></script>
-  <script type="text/javascript" src="source/underscore.js"></script>
-  <script type="text/javascript" src="source/config.js"></script>
-  <script type="text/javascript" src="source/util.js"></script>
-  <script type="text/javascript" src="source/index.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <hr class="featurette-divider">
+</div> <!-- /.container-->
 
-  ga('create', 'UA-35908939-4', 'earlyoakland.com');
-  ga('send', 'pageview');
+      <!-- /END THE FEATURETTES -->
+      
 
-</script>
-</body>
+<div class="container marketing">
+<h2 class="text-center">Services Provided By:</h2><a name="partners"></a>
+<h2> </h2>
+
+      <!-- Four columns of text for site sponsors -  -->
+      <div class="row">
+        <div class="col-lg-3">
+          <a href="http://www.bananasinc.org/" ><img class="img" src="images/bananas180.png" alt="bananas"></a>
+<!--                  <h3>Bananas, Inc.</h3> -->
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+          <a href="http://www.ousd.k12.ca.us/Domain/92" ><img class="img" src="images/sprout180.png" alt="ece"></a>
+<!--                  <h3>OUSD ECE</h3> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-3">
+          <a href="http://www2.oaklandnet.com/Government/o/DHS/o/ChildrenYouthServices/OAK022077" ><img class="img" src="images/headstart180.png" alt="headstart"></a>
+<!--          <h3>Oakland HeadStart</h3>-->
+        </div><!-- /.col-lg-3 -->
+        <div class="col-lg-3">
+          <a href="http://www.unitycouncil.org/head-start-and-early-head-start/" ><img class="img" src="images/unity180.png" alt="unity"></a>
+<!--          <h3>Unity Council Preschools</h3>-->
+        </div><!-- /.col-lg-3 -->
+      </div><!-- /.row -->
+</div> <!-- /.container-->
+
+ 
+<div class="container">
+<h2 class="text-center" >EarlyOakland is Supported By:</h2>
+</div> <!-- /.container-->
+
+
+<div class="container marketing"><a name="funders"></a>
+
+      <!-- Three columns of text for site sponsors - rounded logos? -->
+      <div class="row">
+        <div class="col-lg-4">
+          <a href="http://krfoundation.org/" ><img class="img-rounded" border-radius: 6px; src="images/rainin300.png" alt="rainin"></a>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <a href="http://www.first5alameda.org" ><img class="img-rounded" border-radius: 6px; src="images/firstfive300.png" alt="firstfive"></a>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <a href="http://www.oaklandeducates.com/" ><img class="img-rounded" border-radius: 6px; src="images/oakedcabinet300.png" alt="OEC"></a>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+</div> <!-- /.container-->
+
+
+<div class="container">
+<h2 class="text-center">Built in partnership with</h2>
+<a href="http://openoakland.org"><img src="oologo.png" class="img-responsive center-block"></a>
+</div>
+      
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Openly licensed- Fork this site &middot; <a href="https://github.com/openoakland/EarlyOakland">Code on GitHub</a> &middot;</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+  </body>
 </html>
