@@ -22,7 +22,9 @@ $(function() {
   fetchJSON('data.json', function(err, data) {
     if (err) return alert(JSON.stringify(err))
     data.map(function(item) { 
-      if (item.Type !== 'OUSD') item.markerURL = "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png"
+      item.markerURL = "images/red-dot.png"
+      if (item.Type !== 'OUSD') item.markerURL = "images/yellow-dot.png"
+      if (item.Type === 'Alternate') item.markerURL = "images/green-dot.png"
     })
     allData = data
     //create results count
