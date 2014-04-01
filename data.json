@@ -1193,5 +1193,101 @@
   "location": {
     "lat": 37.746312,
     "lng": -122.141733
+  }
+},
+  {
+  "School Name": "Building Blocks Therapeutic Preschool",
+  "Director Name": "",
+  "Campus/Site Name": "Oakland",
+  "StreetAddress": "2370 Grande Vista Place, Oakland, 94601",
+  "Location Info": "",
+  "Web Address": "http://www.senecacenter.org/school/preschool",
+  "Telephone Number": "510-434-7990",
+  "Type": "Alternate",
+  "Ages Served": "3-5-yrs",
+  "half day": "no",
+  "full day": "yes",
+  "before school": "yes",
+  "after school": "no",
+  "location": {
+    "lat": 37.793892,
+    "lng": -122.224527
   }  
-}]
+},
+  {
+  "School Name": "Salvation Army-Booth Memorial",
+  "Director Name": "Cheryl Murray",
+  "Campus/Site Name": "Booth",
+  "StreetAddress": "2794 Garden St, Oakland, 94601",
+  "Location Info": "",
+  "Web Address": "http://www.gosalarmy.org/deloro/boothcdc",
+  "Telephone Number": "510-535-5088",
+  "Type": "Alternate",
+  "Ages Served": "Prenatal-5-yrs",
+  "half day": "no",
+  "full day": "yes",
+  "before school": "no",
+  "after school": "no",
+  "location": {
+    "lat": 37.793556,
+    "lng": -122.222099
+  	}  
+  },
+  {
+  "School Name": "Supporting Future Growth",
+  "Director Name": "",
+  "Campus/Site Name": "",
+  "StreetAddress": "5909 Camden St, Oakland, 94605",
+  "Location Info": "",
+  "Web Address": "",
+  "Telephone Number": "510-567-8362",
+  "Type": "Alternate",
+  "Ages Served": "Prenatal-5-yrs",
+  "half day": "no",
+  "full day": "yes",
+  "before school": "no",
+  "after school": "no",
+  "location": {
+    "lat": 37.775048,
+    "lng": 122.185357
+  	} 
+  },
+  {
+  "School Name": "St. Mary’s Center",
+  "Director Name": "",
+  "Campus/Site Name": "",
+  "StreetAddress": "3208 San Pablo Ave, Oakland, 94608",
+  "Location Info": "",
+  "Web Address": "http://www.stmaryscenter.org/preschool.html",
+  "Telephone Number": "510-595-4030",
+  "Type": "Alternate",
+  "Ages Served": "3-5-yrs",
+  "half day": "no",
+  "full day": "yes",
+  "before school": "no",
+  "after school": "no",
+  "location": {
+    "lat": 37.822802,
+    "lng": -122.276815
+  	}
+  },
+  {
+  "School Name": "St. Vincent’s Day Home",
+  "Director Name": "Corinne M. Mohrmann",
+  "Campus/Site Name": "",
+  "StreetAddress": "1086 8th St, Oakland, 94607",
+  "Location Info": "",
+  "Web Address": "http://svdh.org/",
+  "Telephone Number": "510-832-8324",
+  "Type": "Alternate",
+  "Ages Served": "3-5-yrs",
+  "half day": "no",
+  "full day": "yes",
+  "before school": "yes",
+  "after school": "yes",
+  "location": {
+    "lat": 37.804898,
+    "lng": -122.286100
+  	}
+}
+]
