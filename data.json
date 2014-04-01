@@ -1175,22 +1175,4 @@
     "lat": 37.7592173,
     "lng": -122.1770068
   }
-  {
-  "School Name": "ALA Costa Oakland",
-  "Director Name": "Tanya Coffield",
-  "Campus/Site Name": "Oakland",
-  "StreetAddress": "3390 Malcolm Ave, Oakland, 94605",
-  "Location Info": "",
-  "Web Address": "http://www.ousd.k12.ca.us/Page/640",
-  "Telephone Number": "510-383-3200",
-  "Type": "Head Start",
-  "Ages Served": "3-10-yrs",
-  "half day": "yes",
-  "full day": "no",
-  "before school": "no",
-  "after school": "yes",
-  "location": {
-    "lat": 37.746312,
-    "lng": -122.141733
-  }
 }]
