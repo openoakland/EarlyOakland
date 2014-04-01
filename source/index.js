@@ -23,10 +23,9 @@ $(function() {
     if (err) return alert(JSON.stringify(err))
     data.map(function(item) { 
       item.markerURL = "images/red-dot.png"
-      if (item.Type === 'OUSD' {
+      if (item.Type === 'OUSD') {
         item.markerURL = "images/red-dot.png"
-      }
-      else if (item.Type === 'Alternate') {
+      } else if (item.Type === 'Alternate') {
         item.markerURL = "images/green-dot.png"
       } else {
         item.markerURL = "images/yellow-dot.png"
