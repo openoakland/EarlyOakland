@@ -57,11 +57,11 @@
         <div class='well'>
           <h4>
             Address
-            <small>
+            <p>
               (
               <a id='find_me' href='#'>find me</a>
               )
-            </small>
+            </p>
           </h4>
           <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
           <input class='btn btn-primary' id='search' type='button' value='Search' />
@@ -187,24 +187,24 @@
     <div class="popup-marker-data" style="height: 250px;">
         <h4><%= school_name.value %></h4>
         <p><strong><%= campus_site_name.value %></strong></p>
-        <small><%= streetaddress.value %></small><br>
-        <small><%= telephone_number.value %></small>
+        <p><%= streetaddress.value %></p><br>
+        <p><%= telephone_number.value %></p>
         <h6>Program Details</h6>
         <hr>
         <dl class="dl-horizontal">
             <% if ( typeof director_name !== 'undefined' ) { %> 
-                <dt><small><%= director_name.name %>:</small></dt>
-                <dd><small><%= director_name.value %></small></dd>
+                <dt><p><%= director_name.name %>:</p></dt>
+                <dd><p><%= director_name.value %></p></dd>
             <% } %>
 
             <% if ( typeof ages_served !== 'undefined' ) { %> 
-                <dt><small><%= ages_served.name %>:</small></dt>
-                <dd><small><%= ages_served.value %></small></dd>
+                <dt><p><%= ages_served.name %>:</p></dt>
+                <dd><p><%= ages_served.value %></p></dd>
             <% } %>
 
             <% if ( typeof web_address !== 'undefined' ) { %> 
-                <dt><small><%= web_address.name %>:</small></dt>
-                <dd><small><a href="<%= web_address.value %>"><%= web_address.value %></a></small></dd>
+                <dt><p><%= web_address.name %>:</p></dt>
+                <dd><p><a href="<%= web_address.value %>"><%= web_address.value %></a></p></dd>
             <% } %>
             
             <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
@@ -216,8 +216,8 @@
                         var time = full_day.name 
                     } %> 
 
-                <dt><small>Time</small>:</dt>
-                <dd><small><%= time %></a></small></dd>
+                <dt><p>Time</p>:</dt>
+                <dd><p><%= time %></a></p></dd>
             <% } %>
 
             <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
@@ -229,8 +229,8 @@
                         var school_hours = after_school.name 
                     } %> 
 
-                <dt><small>School Hours</small>:</dt>
-                <dd><small><%= school_hours %></a></small></dd>
+                <dt><p>School Hours</p>:</dt>
+                <dd><p><%= school_hours %></a></p></dd>
             <% } %>
         </dl>
     </div>
