@@ -40,7 +40,7 @@
   "School Name": "City of Oakland Head Start",
   "Director Name": "Hetzel Simbulan",
   "Campus/Site Name": "Eastmont Head Start",
-  "StreetAddress": "7200 Bancroft Avenue, Oakland, 94605",
+  "StreetAddress": "7200 Bancroft Avenue #203, Oakland, 94605",
   "Location Info": "Ste 203",
   "Web Address": "",
   "Telephone Number": "510 615-5747",
@@ -97,7 +97,7 @@
   "School Name": "City of Oakland Head Start",
   "Director Name": "Terry Chen",
   "Campus/Site Name": "San Antonio Park Head Start",
-  "StreetAddress": "1707 E. 19th St. Oakland, 94606",
+  "StreetAddress": "1701 E. 19th St. Oakland, 94606",
   "Location Info": "",
   "Web Address": "",
   "Telephone Number": "510 535-5609",
@@ -304,25 +304,6 @@
 },
 {
   "School Name": "City of Oakland Head Start",
-  "Director Name": "Cheryl Murray",
-  "Campus/Site Name": "Salvation Army Head Start",
-  "StreetAddress": "2794 Garden St., Oakland, 94601",
-  "Location Info": "",
-  "Web Address": "",
-  "Telephone Number": "510 535-5088",
-  "Type": "Head Start",
-  "Ages Served": "3-5-yrs",
-  "half day": "no",
-  "full day": "yes",
-  "before school": "no",
-  "after school": "no",
-  "location": {
-    "lat": 37.7933588,
-    "lng": -122.2224524
-  }
-},
-{
-  "School Name": "City of Oakland Head Start",
   "Director Name": "Jessica Phalon",
   "Campus/Site Name": "Head Start Family Child Care - Phalon",
   "StreetAddress": "3202 35th Ave. Oakland, 94619",
@@ -433,25 +414,6 @@
   "location": {
     "lat": 37.76478700000001,
     "lng": -122.18999
-  }
-},
-{
-  "School Name": "City of Oakland Head Start",
-  "Director Name": "Kathy Washington",
-  "Campus/Site Name": "Head Start Family Child Care - Washington",
-  "StreetAddress": "757 Aileen St. Oakland, 94609",
-  "Location Info": "",
-  "Web Address": "",
-  "Telephone Number": "510 333-5570",
-  "Type": "Head Start Family Child Care",
-  "Ages Served": "3-5-yrs",
-  "half day": "no",
-  "full day": "yes",
-  "before school": "no",
-  "after school": "no",
-  "location": {
-    "lat": 37.84122199999999,
-    "lng": -122.269127
   }
 },
 {
