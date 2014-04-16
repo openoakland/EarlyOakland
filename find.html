@@ -7,26 +7,43 @@
   <meta content='' name='description' />
   <meta content='' name='author' />
   <!-- Styles -->
-  <link rel="stylesheet" href="styles/bootstrap.spacelab.min.css"/>
-  <link rel="stylesheet" href="styles/bootstrap-responsive.min.css"/>
-  <link rel="stylesheet" href="styles/custom.css"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
   <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class='navbar'>
-    <div class='navbar-inner'>
-      <div class='container'>
-        <a href="index.html" class='brand'>Back to main page</a>
+  <div class="navbar-wrapper">
+      <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EarlyOakland</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="http://www.earlyoakland.org">Home</a></li>
+              <li class="active"><a href="find.html">Find Services</a></li>
+<!--                <li><a href="#funders">Funders</a></li>
+              <li><a href="#partners">Partners</a></li> -->
+              <li><a href="#" data-toggle="modal" data-target="#suggestions">Enrolling Steps</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#faq">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
   <div class='container-fluid'>
     <div class='row-fluid'>
       
-      <div class='span3'>
+      <div class='col-xs-12 col-sm-3'>
         <p align="center">
           <img src='images/eologo.png' width="150px"></p>
         <p>
@@ -46,19 +63,14 @@
         </p>
       </div>
       
-      <div class='span6' id="mapContainer">
+      <div class='col-xs-12 col-sm-9 col-md-6' id="mapContainer">
         <div id='map_canvas'></div>
       </div>
       
-      <div class='span3'>
+      <div class='col-xs-12 col-sm-9 col-md-3'>
         <div class='well'>
           <h4>
-            Address
-            <p>
-              (
-              <a id='find_me' href='#'>find me</a>
-              )
-            </p>
+            Address (<a id='find_me' href='#'>find me</a>)
           </h4>
           <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
           <input class='btn btn-primary' id='search' type='button' value='Search' />
@@ -179,29 +191,87 @@
 
     </div>
   </div>
+  <!--MODALS!-->
+  <div class="modal fade bs-example-modal-lg" id="suggestions"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Finding and Enrolling in Early Education Programs in Oakland: </h4>
+        </div>
+        
+        <div class="row featurette"> 
+          <div class="col-md-3">
+            <img class="featurette-image img-responsive" src="images/slide500.jpg" alt="slides">
+          </div>
+          <div class="col-md-9">
+        <ul>
+          <li>First- use our <a href="find.html">map tool</a> to locate a service that is convenient for you.</li>
+          <li>Talk to other parents about their experiences; read materials from <a href="http://bananasinc.org">BANANAS</a> on selecting the right choice for your child and your family.</li>
+          <li>Call BANANAS for information and referrals to different types of programs -- full or part time, different age groups, private, public, subsidized, etc.  (510) 658-0381 <strong>and</strong>
+            If you think your family meets low income guidelines – or if you have a child with a special need -- call the following subsidized programs directly:</li>
+            <ul>
+          <li>Oakland Unified School District: 510-273-1590, <a href="http://www.ousd.k12.ca.us/domain/92">website</a></li>
+          <li>Oakland Head Start: 510-238-3165, <a href="http://www2.oaklandnet.com/Government/o/DHS/o/ChildrenYouthServices/OAK022077">website</a></li>
+          <li>Unity Council: 510-535-6102 <a href="http://www.unitycouncil.org/head-start-and-early-head-start/">website</a></li>
+          <li>Ask questions about the services and learning opportunities provided, and where programs are located (link to our map), and visit them.</li>
+          <li>Be prepared to complete paperwork and present documents such as children’s birth certificates, family income, health and immunization records. proof of residency (not citizenship or immigrant status). </li>
+        </ul>
+        <p>Families in transition or without permanent homes are welcome.
+        You may be put on a waiting list; don’t give up!  Keep calling!</p>
+        <p><a class="btn btn-lg btn-primary" href="find.html" role="button">Find Services Nearby!</a></p>
 
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--MODALS!-->
+  <div class="modal fade bs-example-modal-lg" id="faq"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Frequently Asked Questions</h4>
+        </div>
+        <ul class="faq">
+        <li><strong>What programs are included in this website?</strong></li>
+        <li>All of the State subsidized early learning programs and all of the federally supported Head Start programs in Oakland.  This includes part day and full day programs.  Most serve 3 & 4 year olds; a few are for infants and toddlers.  The website provides information on each program.</li>
+        <li><strong>Do these programs charge a fee?</strong></li>
+        <li>Head Start does not; the state subsidized programs may charge a small fee depending on your income.</li>
+        <li><strong>What if I am not low income?</strong></li>
+        <li>Head Start is open to some higher income families; call to find out if you qualify.
+        Call BANANAS—510-658-0138 for referrals to private early learning programs.</li>
+        <li><strong>What if I have a CalWorks or other Alternative Payment Voucher to pay for child care?</strong></li>
+        <li>Ask the program if they will accept your voucher – or call BANANAS for referrals to private programs that accept vouchers (most do!).</li>
+        <li><strong>What if my child has a special need?</strong></li>
+        <li>Tell the program about your child;  you can also call the Family Resource Network Oakland for assistance ((510) 547-7322 or www.frmoakland.org)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <script type="text/template" class="info-window-content-template">
-    <div class="popup-marker-data" style="height: 250px;">
+    <div class="popup-marker-data" style="height: 250px;max-width:200px;">
         <h4><%= school_name.value %></h4>
-        <p><strong><%= campus_site_name.value %></strong></p>
-        <p><%= streetaddress.value %></p><br>
-        <p><%= telephone_number.value %></p>
-        <h6>Program Details</h6>
+        <strong><%= campus_site_name.value %></strong><br />
+        <%= streetaddress.value %><br />
+        <%= telephone_number.value %><br />
+        <% if ( typeof web_address !== 'undefined' ) { %> 
+        <a href="<%= web_address.value %>">Website</a><br />
+        <% } %>
+        <h5>Program Details</h5>
         <hr>
         <dl class="dl-horizontal">
             <% if ( typeof director_name !== 'undefined' ) { %> 
-                <dt><p><%= director_name.name %>:</p></dt>
-                <dd><p><%= director_name.value %></p></dd>
+                <dt><%= director_name.name %>:</dt>
+                <dd><%= director_name.value %></dd>
             <% } %>
 
             <% if ( typeof ages_served !== 'undefined' ) { %> 
-                <dt><p><%= ages_served.name %>:</p></dt>
-                <dd><p><%= ages_served.value %></p></dd>
-            <% } %>
-
-            <% if ( typeof web_address !== 'undefined' ) { %> 
-                <dt><p><%= web_address.name %>:</p></dt>
-                <dd><p><a href="<%= web_address.value %>"><%= web_address.value %></a></p></dd>
+                <dt><%= ages_served.name %>:</dt>
+                <dd><%= ages_served.value %></dd>
             <% } %>
             
             <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
@@ -213,8 +283,8 @@
                         var time = full_day.name 
                     } %> 
 
-                <dt><p>Time:</p></dt>
-                <dd><p><%= time %></a></p></dd>
+                <dt>Time:</dt>
+                <dd><%= time %></a></dd>
             <% } %>
 
             <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
@@ -226,8 +296,8 @@
                         var school_hours = after_school.name 
                     } %> 
 
-                <dt><p>School Hours:</p></dt>
-                <dd><p><%= school_hours %></a></p></dd>
+                <dt>School Hours:</dt>
+                <dd><%= school_hours %></a></dd>
             <% } %>
         </dl>
     </div>

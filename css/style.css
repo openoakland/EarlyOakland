@@ -79,3 +79,58 @@ ul.faq li:nth-child(even)
 	max-width: 200px;
 	margin-bottom: 20px;
 }
+.popup-marker-data h4, .popup-marker-data h5
+{
+	margin-bottom: 5px;
+}
+.popup-marker-data, .popup-marker-data dt, .popup-marker-data dd
+{
+	line-height: 18px;
+}
+
+
+a { color: #4B58A6; }
+
+#map_canvas img {
+  max-width: none;
+}
+
+#map_canvas { min-height: 400px; }
+
+.filter-box { 
+  height: 15px; 
+  width: 15px;  
+  display: inline-block;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box; 
+}
+
+.filter-yellow { background-color: #FBF358; }
+.filter-green { background-color: #00E13C; }
+.filter-blue { background-color: #5781FC; }
+.filter-purple { background-color: #7C54FB; }
+.filter-red { background-color: #FB6353; }
+
+canvas {-ms-touch-action: double-tap-zoom;}
+
+/* Map Info Window Content */
+.popup-marker-data p { margin-bottom: 5px; }
+.popup-marker-data hr { margin: 5px 0 5px 0; }
+.popup-marker-data .dl-horizontal { margin-top: 5px; }
+.popup-marker-data dt { width: 105px; }	
+.popup-marker-data dd { margin-left: 115px; }	
+
+.dl-horizontal dt {
+float: left;
+clear: left;
+text-align: right;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
