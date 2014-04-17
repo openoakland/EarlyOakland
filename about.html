@@ -2,88 +2,177 @@
 <html>
 <head>
 	<title>About - Early Education Services - Oakland</title>
-	<link href='styles/master.css' media='all' rel='stylesheet' type='text/css' /> 
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<script src="/source/analytics_lib.js" type="text/javascript"></script>
 	<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
-	<div id="page"> 
-		<div class='content-simple'>
-			<div id='title'>
-				<ul id='header-nav'>
-					<li><a href="/">Home</a></li>
-					<li><a href='about.html'>About</a></li>
-					<li><a href='http://http://www.ousd.k12.ca.us'>OUSD</a></li>
-				</ul>
+	<div class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">EarlyOakland</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="http://www.earlyoakland.org">Home</a></li>
+						<li><a href="find.html">Find Services</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#suggestions">Enrolling Steps</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#faq">FAQ</a></li>
+					</ul>
+				</div>
 			</div>
-				 <h1>EarlyOakland</h1>
-				 <p>a project of</p>  
-				 <a href='/'><img width="200px" height="77px" src='oologo.png' alt='early childhood services oakland' /></a>
-			<hr />
-			<h1>About this project</h1>
-			
-			<ul id="faq">
-	          <li><a href="#what-is-this">What is this?</a></li>
-	          <li><a href="#how-does-it-work">How does it work?</a></li>
-	          <li><a href="#who-is-it-for">Who is it for?</a></li>
-	          <li><a href="#why-did-you-make-it">Why did you make it?</a></li>
-	          <li><a href="#i-need-more-info">I need more info?</a></li>
-		  <li><a href="#what-did-you-use-to-build-it">What did you use to build it?</a></li>
-	          <li><a href="#credits">Credits</a></li>
-	              </ul>
-			
-			<h2 id="what-is-this">What is this?</h2>
-			<p>EarlyOakland.com is a tool that allows parents to find free or low cost services for their children in Oakland. </p>
-			
-			<h2 id="how-does-it-work">How does it work?</h2>
-			<p>With the tools on the left column, you can find locations providing early care and education services. You can also search around an address or intersection.</p>
-			<p>On the right side the service locations are plotted on a map of Oakland. Each point is clickable and will show you details about the services available and any restrictions for income eligibility.</p>
-
-			<div class='clear'></div>
-			<h2 id="who-is-it-for">Who is it for?</h2>
-			<p>This tool is free and for anyone who is interested finding early childhood services.</p>
-			
-			<p>It could be used in the following ways:</p>
-			<ul>
-				<li>By parents trying to find services close to their home or workplace.</li>
-				<li>By policy makers and OUSD analysts considering issues of access to services and equity of service distribution</li>
-			</ul>
-			
-			<h2 id="why-did-you-make-it">Why did you make it?</h2>
-
-			<p>The Oakland Education Cabinet, and its three chairs (Oakland Unified School District Superintendent Dr. Gary Yee, Mayor Jean Quan, and Mills College Dean of Education, Dr. Kathy Schultz) are pleased to share the following interactive map of locations for state and federally funded early care and education programs. The programs provide part day and full day early education and are free or low cost for qualifying families. The Cabinet encourages everyone in Oakland to share the map with parents and others who are raising children in our city. We know that the first five years of a childs life is a very important time for learning, and pre-school has been proven to assist children prepare for success in school and life.</p>
-			
-			<h2 id="i-need-more-info">This is great, but I need more info!</h2>
-			<p>We also want to encourage you to utilize BANANAS Child Care Resource and Referral agency, where parents can receive free referrals to a wide variety of early care and education services, including nannies, family child care, preschools, and playgroups. BANANAS also has a wealth of free information on parenting, including workshops and handouts. Contact BANANAS by calling 510-658-7353,sending an <a href='mailto:bananas@bananasinc.org'>email</a> or their <a href='http://www.bananasinc.org'>website</a>.</p>
-
-			<p>Please note that ECE programs listed are for information only. Parents should visit and check out the programs to see if the family and the program are a good fit.</p>
-
-			<h2 id="where-did-you-get-your-data-from">Where did you get your data from?</h2>
-			<p>The data were collected directly from each agency and can be found <a href='http://data.openoakland.org/dataset/early-childhood-services'>here</a>. The raw Fusion Tables data in KML format can be seen and downloaded <a href='https://www.google.com/fusiontables/data?docid=1D7Lta4QnerWlTClAiWoQsaWZksDcycqc0Up0QPI'>here</a>.</p>
-
-			<h2 id="what-did-you-use-to-build-it">What did you use to build it?</h2>
-			<p>This site is built with HTML, CSS, Javascript and Google's Fusion Tables and Maps API. The data is stored in Fusion Tables.</p>
-			
-			<p>Technologies used:</p>
-			<ul>
-				<li><a href='http://jquery.com'>jQuery</a></li>
-				<li><a href='http://code.google.com/apis/maps/documentation/javascript/'>Google Maps API V3</a></li> 
-				<li><a href='http://www.google.com/fusiontables'>Google Fusion Tables</a></li>
-			</ul> 
-			
-			<p>If you are interested, all the code for this project is up on <a href='http://github.com'>github</a>:</p>
-			<ul>
-				<li><a href='https://github.com/openoakland/EarlyOakland'>Early Oakland</a> (this site)</li>
-				</ul>
-				
-			<h2 id="credits">Credits</h2>
-			<p>This site was built, designed and hosted by Steve Spiker & Cris Cristina at the International Open Data Day Hackathon hosted by <a href='http://opendataday.openoakland.org/'>OpenOakland</a> and with continued support from Max Ogden, Rob Chiniquy, Tarik Bennet, Josh Morrow and Felix Sargent. The original map interface was built on the template by <a href="http://derekeder.com>"Derek Eder</a>.</p> 
-			
-			
-		
-		<hr />
-		<p class='mute'>A project by <a href='http://openoakland.org'>OpenOakland</a></p>	
 		</div>
 	</div>
-</body>
-</html>
+	<div id="page"> 
+		<div class='container'>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 text-center">
+					<h1>EarlyOakland</h1>
+					<p>a project of</p>  
+					<a href='/'><img width="200px" height="77px" src='oologo.png' alt='early childhood services oakland' /></a>
+				</div>
+				<div class="col-xs-12 col-sm-6">
+					<h1>About this project</h1>
+					<ul id="faq">
+						<li><a href="#what-is-this">What is this?</a></li>
+						<li><a href="#how-does-it-work">How does it work?</a></li>
+						<li><a href="#who-is-it-for">Who is it for?</a></li>
+						<li><a href="#why-did-you-make-it">Why did you make it?</a></li>
+						<li><a href="#i-need-more-info">I need more info?</a></li>
+						<li><a href="#what-did-you-use-to-build-it">What did you use to build it?</a></li>
+						<li><a href="#credits">Credits</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 id="what-is-this">What is this?</h2>
+					<p>EarlyOakland.com is a tool that allows parents to find free or low cost services for their children in Oakland. </p>
+
+					<h2 id="how-does-it-work">How does it work?</h2>
+					<p>With the tools on the left column, you can find locations providing early care and education services. You can also search around an address or intersection.</p>
+					<p>On the right side the service locations are plotted on a map of Oakland. Each point is clickable and will show you details about the services available and any restrictions for income eligibility.</p>
+
+					<div class='clear'></div>
+					<h2 id="who-is-it-for">Who is it for?</h2>
+					<p>This tool is free and for anyone who is interested finding early childhood services.</p>
+
+					<p>It could be used in the following ways:</p>
+					<ul>
+						<li>By parents trying to find services close to their home or workplace.</li>
+						<li>By policy makers and OUSD analysts considering issues of access to services and equity of service distribution</li>
+					</ul>
+
+					<h2 id="why-did-you-make-it">Why did you make it?</h2>
+
+					<p>The Oakland Education Cabinet, and its three chairs (Oakland Unified School District Superintendent Dr. Gary Yee, Mayor Jean Quan, and Mills College Dean of Education, Dr. Kathy Schultz) are pleased to share the following interactive map of locations for state and federally funded early care and education programs. The programs provide part day and full day early education and are free or low cost for qualifying families. The Cabinet encourages everyone in Oakland to share the map with parents and others who are raising children in our city. We know that the first five years of a childs life is a very important time for learning, and pre-school has been proven to assist children prepare for success in school and life.</p>
+
+					<h2 id="i-need-more-info">This is great, but I need more info!</h2>
+					<p>We also want to encourage you to utilize BANANAS Child Care Resource and Referral agency, where parents can receive free referrals to a wide variety of early care and education services, including nannies, family child care, preschools, and playgroups. BANANAS also has a wealth of free information on parenting, including workshops and handouts. Contact BANANAS by calling 510-658-7353,sending an <a href='mailto:bananas@bananasinc.org'>email</a> or their <a href='http://www.bananasinc.org'>website</a>.</p>
+
+					<p>Please note that ECE programs listed are for information only. Parents should visit and check out the programs to see if the family and the program are a good fit.</p>
+
+					<h2 id="where-did-you-get-your-data-from">Where did you get your data from?</h2>
+					<p>The data were collected directly from each agency and can be found <a href='http://data.openoakland.org/dataset/early-childhood-services'>here</a>. The raw Fusion Tables data in KML format can be seen and downloaded <a href='https://www.google.com/fusiontables/data?docid=1D7Lta4QnerWlTClAiWoQsaWZksDcycqc0Up0QPI'>here</a>.</p>
+
+					<h2 id="what-did-you-use-to-build-it">What did you use to build it?</h2>
+					<p>This site is built with HTML, CSS, Javascript and Google's Fusion Tables and Maps API. The data is stored in Fusion Tables.</p>
+
+					<p>Technologies used:</p>
+					<ul>
+						<li><a href='http://jquery.com'>jQuery</a></li>
+						<li><a href='http://code.google.com/apis/maps/documentation/javascript/'>Google Maps API V3</a></li> 
+						<li><a href='http://www.google.com/fusiontables'>Google Fusion Tables</a></li>
+					</ul> 
+
+					<p>If you are interested, all the code for this project is up on <a href='http://github.com'>github</a>:</p>
+					<ul>
+						<li><a href='https://github.com/openoakland/EarlyOakland'>Early Oakland</a> (this site)</li>
+					</ul>
+
+					<h2 id="credits">Credits</h2>
+					<p>This site was built, designed and hosted by Steve Spiker & Cris Cristina at the International Open Data Day Hackathon hosted by <a href='http://opendataday.openoakland.org/'>OpenOakland</a> and with continued support from Max Ogden, Rob Chiniquy, Tarik Bennet, Josh Morrow and Felix Sargent. The original map interface was built on the template by <a href="http://derekeder.com">Derek Eder</a>.</p> 			
+
+					<hr />
+					<p class='mute'>A project by <a href='http://openoakland.org'>OpenOakland</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--MODALS!-->
+	<div class="modal fade bs-example-modal-lg" id="suggestions"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Finding and Enrolling in Early Education Programs in Oakland: </h4>
+				</div>
+
+				<div class="row featurette"> 
+					<div class="col-md-3">
+						<img class="featurette-image img-responsive" src="images/slide500.jpg" alt="slides">
+					</div>
+					<div class="col-md-9">
+						<ul>
+							<li>First- use our <a href="find.html">map tool</a> to locate a service that is convenient for you.</li>
+							<li>Talk to other parents about their experiences; read materials from <a href="http://bananasinc.org">BANANAS</a> on selecting the right choice for your child and your family.</li>
+							<li>Call BANANAS for information and referrals to different types of programs -- full or part time, different age groups, private, public, subsidized, etc.  (510) 658-0381 <strong>and</strong>
+								If you think your family meets low income guidelines – or if you have a child with a special need -- call the following subsidized programs directly:</li>
+								<ul>
+									<li>Oakland Unified School District: 510-273-1590, <a href="http://www.ousd.k12.ca.us/domain/92">website</a></li>
+									<li>Oakland Head Start: 510-238-3165, <a href="http://www2.oaklandnet.com/Government/o/DHS/o/ChildrenYouthServices/OAK022077">website</a></li>
+									<li>Unity Council: 510-535-6102 <a href="http://www.unitycouncil.org/head-start-and-early-head-start/">website</a></li>
+									<li>Ask questions about the services and learning opportunities provided, and where programs are located (link to our map), and visit them.</li>
+									<li>Be prepared to complete paperwork and present documents such as children’s birth certificates, family income, health and immunization records. proof of residency (not citizenship or immigrant status). </li>
+								</ul>
+								<p>Families in transition or without permanent homes are welcome.
+									You may be put on a waiting list; don’t give up!  Keep calling!</p>
+									<p><a class="btn btn-lg btn-primary" href="find.html" role="button">Find Services Nearby!</a></p>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!--MODALS!-->
+				<div class="modal fade bs-example-modal-lg" id="faq"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">Frequently Asked Questions</h4>
+							</div>
+							<ul class="faq">
+								<li><strong>What programs are included in this website?</strong></li>
+								<li>All of the State subsidized early learning programs and all of the federally supported Head Start programs in Oakland.  This includes part day and full day programs.  Most serve 3 & 4 year olds; a few are for infants and toddlers.  The website provides information on each program.</li>
+								<li><strong>Do these programs charge a fee?</strong></li>
+								<li>Head Start does not; the state subsidized programs may charge a small fee depending on your income.</li>
+								<li><strong>What if I am not low income?</strong></li>
+								<li>Head Start is open to some higher income families; call to find out if you qualify.
+									Call BANANAS—510-658-0138 for referrals to private early learning programs.</li>
+									<li><strong>What if I have a CalWorks or other Alternative Payment Voucher to pay for child care?</strong></li>
+									<li>Ask the program if they will accept your voucher – or call BANANAS for referrals to private programs that accept vouchers (most do!).</li>
+									<li><strong>What if my child has a special need?</strong></li>
+									<li>Tell the program about your child;  you can also call the Family Resource Network Oakland for assistance ((510) 547-7322 or www.frmoakland.org)</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript" src="source/jquery.js"></script>
+					<script type="text/javascript" src="source/bootstrap.js"></script>
+				</body>
+				</html>
