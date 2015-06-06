@@ -7,6 +7,11 @@ body
 {
 	max-width: 970px;
 }
+
+#myCarousel {
+    margin-top: -20px;
+}
+
 .carousel-caption
 {
 	max-width: 500px;
@@ -16,11 +21,10 @@ body
 {
 	background: rgba(34, 136, 0, 1);
     border: 0;
-    margin-bottom: 0;
 }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand
 {
-	color:#FFF;
+	color: #FFF;
 }
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-brand:hover
 {
