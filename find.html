@@ -42,14 +42,14 @@
   </div>
   <div class='container-fluid'>
     <div class='row-fluid'>
-      
+
       <div class='col-xs-12 col-sm-3'>
         <p align="center">
-          <img src='images/eologo.png' width="150px"></p>
+          <img src='images/eologo.png' width="150px" alt="Early Oakland logo"></p>
         <p>
           EarlyOakland is a campaign by the Oakland Education Cabinet to help Oaklanders find affordable early care and education services. You can use the map of to find subsidized programs for eligible families and children including HeadStart and Child Development Centers. Stay tuned for more resources!
           <a href='about.html'><strong>Read more &raquo;</strong></a>
-          
+
           <p>
             If you cannot find the service you are looking for or need more assistance contact <a href='http://www.bananasinc.org' target="_blank">BANANAS</a> or call (510) 658-0381.
           </p>
@@ -59,20 +59,23 @@
             <a href='http://www.oaklandnet.com' target="_blank">the Oakland Education Cabinet</a>
             .
           </p>
-          
+
         </p>
       </div>
-      
+
       <div class='col-xs-12 col-sm-9 col-md-6' id="mapContainer">
         <div id='map_canvas'></div>
       </div>
-      
+
       <div class='col-xs-12 col-sm-9 col-md-3'>
         <div class='well'>
           <h4>
             Address (<a id='find_me' href='#'>find me</a>)
           </h4>
+          <label>
+          <span class='sr-only'>Enter an address or an intersection</span>
           <input class='input-block-level' id='search_address' placeholder='Enter an address or an intersection' type='text' />
+          </label>
           <input class='btn btn-primary' id='search' type='button' value='Search' />
         </div>
 
@@ -185,24 +188,24 @@
           </ul>
 
         </div>
-        
+
 
       </div>
 
     </div>
   </div>
   <!--MODALS!-->
-  <div class="modal fade bs-example-modal-lg" id="suggestions"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal fade bs-example-modal-lg" id="suggestions"tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="myModalLabel">Finding and Enrolling in Early Education Programs in Oakland: </h4>
         </div>
-        
-        <div class="row featurette"> 
+
+        <div class="row featurette">
           <div class="col-md-3">
-            <img class="featurette-image img-responsive" src="images/slide500.jpg" alt="slides">
+            <img class="featurette-image img-responsive" src="images/slide500.jpg" alt="Child on slide">
           </div>
           <div class="col-md-9">
         <ul>
@@ -223,18 +226,18 @@
 
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
 
   <!--MODALS!-->
-  <div class="modal fade bs-example-modal-lg" id="faq"tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal fade bs-example-modal-lg" id="faq"tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title" id="myModalLabel">Frequently Asked Questions</h4>
+          <h4 class="modal-title" id="myModalLabel2">Frequently Asked Questions</h4>
         </div>
         <ul class="faq">
         <li><strong>What programs are included in this website?</strong></li>
@@ -258,43 +261,43 @@
         <strong><%= campus_site_name.value %></strong><br />
         <%= streetaddress.value %><br />
         <%= telephone_number.value %><br />
-        <% if ( typeof web_address !== 'undefined' ) { %> 
+        <% if ( typeof web_address !== 'undefined' ) { %>
         <a href="<%= web_address.value %>">Website</a><br />
         <% } %>
         <h5>Program Details</h5>
         <hr>
         <dl class="dl-horizontal">
-            <% if ( typeof director_name !== 'undefined' ) { %> 
+            <% if ( typeof director_name !== 'undefined' ) { %>
                 <dt><%= director_name.name %>:</dt>
                 <dd><%= director_name.value %></dd>
             <% } %>
 
-            <% if ( typeof ages_served !== 'undefined' ) { %> 
+            <% if ( typeof ages_served !== 'undefined' ) { %>
                 <dt><%= ages_served.name %>:</dt>
                 <dd><%= ages_served.value %></dd>
             <% } %>
-            
-            <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) { 
-                    if ( half_day.value === 'yes' && full_day.value === 'yes' ) { 
+
+            <% if ( half_day.value === 'yes' || full_day.value === 'yes' ) {
+                    if ( half_day.value === 'yes' && full_day.value === 'yes' ) {
                         var time = half_day.name + ' and ' + full_day.name
-                    } else if ( half_day.value === 'yes' ) { 
-                        var time = half_day.name 
+                    } else if ( half_day.value === 'yes' ) {
+                        var time = half_day.name
                     } else {
-                        var time = full_day.name 
-                    } %> 
+                        var time = full_day.name
+                    } %>
 
                 <dt>Time:</dt>
                 <dd><%= time %></a></dd>
             <% } %>
 
-            <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) { 
-                    if ( before_school.value === 'yes' && after_school.value === 'yes' ) { 
+            <% if ( before_school.value === 'yes' || after_school.value === 'yes' ) {
+                    if ( before_school.value === 'yes' && after_school.value === 'yes' ) {
                         var school_hours = before_school.name + ' or ' + after_school.name
-                    } else if ( before_school.value === 'yes' ) { 
-                        var school_hours = before_school.name 
+                    } else if ( before_school.value === 'yes' ) {
+                        var school_hours = before_school.name
                     } else {
-                        var school_hours = after_school.name 
-                    } %> 
+                        var school_hours = after_school.name
+                    } %>
 
                 <dt>School Hours:</dt>
                 <dd><%= school_hours %></a></dd>
@@ -322,6 +325,6 @@
   ga('send', 'pageview');
 
 </script>
-  
+
 </body>
 </html>
